@@ -1,0 +1,4 @@
+import {ReactNode} from 'react';import {ArrowUpRight} from 'lucide-react';import {Link} from 'react-router-dom'
+export function SectionHeader({eyebrow,title,description,link}:{eyebrow:string,title:string,description?:string,link?:{label:string,to:string}}){return <div className="section-head"><div><p className="eyebrow">{eyebrow}</p><h2>{title}</h2>{description&&<p className="lead narrow">{description}</p>}</div>{link&&<Link className="text-link" to={link.to}>{link.label}<ArrowUpRight size={15}/></Link>}</div>}
+export function PageHero({eyebrow,title,description}:{eyebrow:string,title:string,description:string}){return <section className="page-hero"><div className="container"><p className="eyebrow">{eyebrow}</p><h1>{title}</h1><p className="lead">{description}</p></div></section>}
+export function Reveal({children,className=''}:{children:ReactNode,className?:string}){return <div className={`reveal ${className}`}>{children}</div>}
