@@ -5,6 +5,7 @@ export function Seo({title,description}: {title?: string; description?: string})
   useEffect(() => {
     const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.title}`
     const desc = description ?? site.description
+    const canonicalUrl = `${window.location.origin}${window.location.pathname}`
     document.title = fullTitle
 
     const setMeta = (selector: string, attrs: Record<string,string>) => {
@@ -21,11 +22,11 @@ export function Seo({title,description}: {title?: string; description?: string})
     setMeta('meta[name="description"]', {name:'description', content:desc})
     setMeta('meta[property="og:title"]', {property:'og:title', content:fullTitle})
     setMeta('meta[property="og:description"]', {property:'og:description', content:desc})
-    setMeta('meta[property="og:url"]', {property:'og:url', content:window.location.href})
+    setMeta('meta[property="og:url"]', {property:'og:url', content:canonicalUrl})
     setMeta('meta[name="twitter:title"]', {name:'twitter:title', content:fullTitle})
     setMeta('meta[name="twitter:description"]', {name:'twitter:description', content:desc})
     setMeta('meta[name="robots"]', {name:'robots', content:'index,follow,max-image-preview:large'})
-    setLink('canonical', window.location.href)
+    setLink('canonical', canonicalUrl)
 
     const structuredData = {
       '@context':'https://schema.org',
