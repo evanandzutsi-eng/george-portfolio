@@ -1,12 +1,12 @@
 import {ArrowUpRight, Github, ExternalLink} from 'lucide-react'
 import {Link} from 'react-router-dom'
 import {projects} from '../data/site'
-import {ProjectCover} from './ProjectCover'
+import {ProjectCover2} from './ProjectCover2'
 import './project-cover.css'
 
 export function ProjectCardWithCover({project}:{project:typeof projects[number]}){
   return <article className="project-card">
-    <ProjectCover slug={project.slug} title={project.title}/>
+    <ProjectCover2 slug={project.slug} title={project.title}/>
     <div className="project-body">
       <div className="tag-row">{project.tags.map(t=><span className="tag" key={t}>{t}</span>)}</div>
       <h3>{project.title}</h3>
