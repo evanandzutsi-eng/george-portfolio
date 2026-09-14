@@ -1,7 +1,7 @@
 import {FormEvent, useMemo, useState} from 'react'
 import {Bot, ExternalLink, Send, Sparkles, UserRound, X} from 'lucide-react'
 import {Link} from 'react-router-dom'
-import {site, projects, services, skills, experience, careerInterests} from '../data/site'
+import {projects, services, skills} from '../data/site'
 
 type Message = {id:number; role:'assistant'|'user'; text:string; sources?:{label:string;to:string}[]}
 
@@ -14,15 +14,15 @@ function localAnswer(question:string){
 
   if (/who|about|george|profile|background|journey/.test(q)) {
     add('About George','/about')
-    return {text:`George Owulama Andzutsi is an AI Engineer & Software Engineer whose work connects web development, software engineering, AI/LLM integration, APIs, automation and practical digital solutions. His career story combines independent engineering work with NASITDEA, the Nigerian Jubilee Fellows Programme (NJFP), NYSC, industrial training and other technical environments.` ,sources}
+    return {text:`George Owulama Andzutsi is an AI Engineer & Software Engineer whose work connects web development, software engineering, AI/LLM integration, APIs, automation and practical digital solutions. His career story combines independent engineering work with NASITDEA, the Nigerian Jubilee Fellows Programme (NJFP), NYSC, industrial training and other technical environments.`,sources}
   }
-  if (/hire|contact|work with|start|project|consult/.test(q)) {
-    add('Start a project','/start-a-project'); add('Contact','/contact')
-    return {text:`The best way to engage George is through the project intake. You can describe the problem, whether AI or automation is involved, your timeline and budget, then choose how you would like to be contacted.`,sources}
+  if (/ai|llm|agent|automation/.test(q)) {
+    add('AI / software approach','/about')
+    return {text:`The portfolio treats AI as an engineering capability rather than a standalone buzzword. The focus is on integrating models into useful software through APIs, application logic, data, automation, security and deployment. Career interests include practical LLM applications, AI-assisted development, AI evaluation and intelligent business processes.`,sources}
   }
   if (/skill|technology|stack|tech|python|react|typescript|fastapi|openai|gemini|anthropic|groq|redis|postgres|supabase|mongo/.test(q)) {
     add('Skills','/skills')
-    return {text:`George's current technical profile spans React.js, TypeScript, JavaScript, Python, FastAPI, REST APIs, authentication, databases, Docker, Git/GitHub, Vercel, Netlify, Railway, Render, Zapier and Make.com. AI/LLM work includes OpenAI, Anthropic, Google Gemini, OpenRouter and Groq, alongside prompt engineering, AI-assisted development, AI evaluation and AI agents.` ,sources}
+    return {text:`George's current technical profile spans React.js, TypeScript, JavaScript, Python, FastAPI, REST APIs, authentication, databases, Docker, Git/GitHub, Vercel, Netlify, Railway, Render, Zapier and Make.com. AI/LLM work includes OpenAI, Anthropic, Google Gemini, OpenRouter and Groq, alongside prompt engineering, AI-assisted development, AI evaluation and AI agents.`,sources}
   }
   if (/project|georgepay|codeflow|regismeet|work/.test(q)) {
     add('Projects','/projects')
@@ -36,9 +36,9 @@ function localAnswer(question:string){
     add('Experience','/experience')
     return {text:`The experience timeline includes independent Web Developer & Software Engineer work with AI integration and automation, NASITDEA as a Stack Assistant, the Nigerian Jubilee Fellows Programme (NJFP), NYSC teaching experience, NTA industrial training/team leadership, Option FM technical operations and university field research leadership.`,sources}
   }
-  if (/ai|llm|agent|automation/.test(q)) {
-    add('AI / software approach','/about')
-    return {text:`The portfolio treats AI as an engineering capability rather than a standalone buzzword. The focus is on integrating models into useful software through APIs, application logic, data, automation, security and deployment. Career interests include practical LLM applications, AI-assisted development, AI evaluation and intelligent business processes.`,sources}
+  if (/hire|contact|work with|start|consult/.test(q)) {
+    add('Start a project','/start-a-project'); add('Contact','/contact')
+    return {text:`The best way to engage George is through the project intake. You can describe the problem, whether AI or automation is involved, your timeline and budget, then choose how you would like to be contacted.`,sources}
   }
   if (/remote|global|location|where/.test(q)) {
     return {text:`George is based in Nigeria and presents himself as available for remote and global collaboration. The portfolio does not claim specific international clients or locations that have not been verified.`}
@@ -63,7 +63,7 @@ async function remoteAnswer(question:string){
     if(!response.ok) return null
     const data=await response.json() as {answer?:string;sources?:{label:string;to:string}[]}
     if(!data.answer) return null
-    return {text:data.answer,sources:data.sources}
+    return {text:data.answer,sources:data.sources,remote:true}
   } catch { return null } finally { window.clearTimeout(timeout) }
 }
 
@@ -78,15 +78,17 @@ export function PortfolioAssistant({fullPage=false}:{fullPage?:boolean}){
     const clean=value.trim(); if(!clean||loading)return
     setQuestion(''); setLoading(true)
     const userId=Date.now(); setMessages(prev=>[...prev,{id:userId,role:'user',text:clean}])
-    const result=await remoteAnswer(clean) ?? localAnswer(clean)
+    const remote=await remoteAnswer(clean)
+    const result=remote ?? localAnswer(clean)
     setMessages(prev=>[...prev,{id:userId+1,role:'assistant',text:result.text,sources:result.sources}])
     setLoading(false)
   }
 
   function onSubmit(e:FormEvent){e.preventDefault();void submit()}
 
+  const endpointEnabled=Boolean(import.meta.env.VITE_PORTFOLIO_AI_ENDPOINT)
   const card=<div className={`assistant-card ${fullPage?'assistant-card-full':''}`}>
-    <div className="assistant-header"><span className="assistant-icon"><Bot size={18}/></span><div><strong>George's Portfolio Assistant</strong><small>{import.meta.env.VITE_PORTFOLIO_AI_ENDPOINT?'AI endpoint enabled · grounded context':'Demo mode · structured portfolio data'}</small></div>{!fullPage&&<button className="icon-btn assistant-close" onClick={()=>setOpen(false)} aria-label="Close assistant"><X size={17}/></button>}</div>
+    <div className="assistant-header"><span className="assistant-icon"><Bot size={18}/></span><div><strong>George's Portfolio Assistant</strong><small>{endpointEnabled?'AI endpoint enabled · grounded context':'Demo mode · structured portfolio data'}</small></div>{!fullPage&&<button className="icon-btn assistant-close" onClick={()=>setOpen(false)} aria-label="Close assistant"><X size={17}/></button>}</div>
     <div className="assistant-messages" aria-live="polite">
       {messages.map(message=><div className={`assistant-message ${message.role}`} key={message.id}><span className="message-avatar">{message.role==='assistant'?<Sparkles size={14}/>:<UserRound size={14}/>}</span><div><p>{message.text}</p>{message.sources?.length?<div className="assistant-sources">{message.sources.map(source=>source.to.startsWith('http')?<a key={source.label} href={source.to} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={12}/></a>:<Link key={source.label} to={source.to}>{source.label}<ExternalLink size={12}/></Link>)}</div>:null}</div></div>)}
       {loading&&<div className="assistant-message assistant"><span className="message-avatar"><Sparkles size={14}/></span><div><p className="typing"><i></i><i></i><i></i></p></div></div>}
