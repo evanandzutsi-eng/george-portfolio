@@ -1,0 +1,56 @@
+import {GitBranch, Bot, CreditCard, Video, Workflow, Code2, Database, Zap} from 'lucide-react'
+
+const themes = {
+  georgepay: {label:'GEORGEPAY', accent:'#38bdf8', secondary:'#6366f1'},
+  'codeflow-ai': {label:'CODEFLOW', accent:'#22d3ee', secondary:'#3b82f6'},
+  regismeet: {label:'REGISMEET', accent:'#a78bfa', secondary:'#6366f1'},
+  'workflow-automation-api-integration': {label:'AUTOMATION', accent:'#34d399', secondary:'#06b6d4'},
+} as const
+
+function Frame({children, className=''}:{children:React.ReactNode;className?:string}){
+  return <div className={`cover-frame ${className}`} style={{background:'linear-gradient(145deg,#07111f,#0b1729)',border:'1px solid rgba(148,163,184,.22)',boxShadow:'0 18px 45px rgba(0,0,0,.28)'}}>{children}</div>
+}
+
+export function ProjectCover({slug,title}:{slug:string;title:string}){
+  const theme = themes[slug as keyof typeof themes] ?? {label:title.toUpperCase(),accent:'#38bdf8',secondary:'#6366f1'}
+  if(slug==='georgepay') return <div className="project-cover" aria-label={`${title} project cover`}>
+    <div className="cover-orbit" style={{background:`radial-gradient(circle,${theme.accent}33,transparent 62%)`}} />
+    <Frame className="cover-dashboard">
+      <div className="cover-bar"><CreditCard size={15}/><span>{theme.label}</span><span className="cover-dot" style={{background:theme.accent}}/></div>
+      <div className="payment-layout">
+        <div className="payment-card" style={{background:`linear-gradient(135deg,${theme.secondary},${theme.accent})`}}><span>GeorgePay</span><strong>•••• 4821</strong><small>SECURE PAYMENT</small></div>
+        <div className="transaction-list"><i/><i/><i/><i/></div>
+      </div>
+    </Frame>
+    <div className="cover-caption"><span style={{color:theme.accent}}>PAYMENTS</span><b>Fast · Secure · Simple</b></div>
+  </div>
+
+  if(slug==='codeflow-ai') return <div className="project-cover" aria-label={`${title} project cover`}>
+    <div className="cover-glow" style={{background:`radial-gradient(circle,${theme.accent}2e,transparent 60%)`}} />
+    <Frame className="cover-code">
+      <div className="cover-bar"><Code2 size={15}/><span>{theme.label}</span><div className="window-dots"><i/><i/><i/></div></div>
+      <div className="code-layout"><div className="code-editor"><b>&lt;AIWorkspace /&gt;</b><span>const response = await</span><span>assistant.generate(prompt)</span><span>return response</span><em>● ● ● ● ●</em></div><div className="ai-panel"><Bot size={20}/><strong>AI Assistant</strong><small>Ready to help you build.</small><div className="ai-line"/></div></div>
+    </Frame>
+    <div className="cover-caption"><span style={{color:theme.accent}}>AI CODE ASSISTANT</span><b>Build with natural language</b></div>
+  </div>
+
+  if(slug==='regismeet') return <div className="project-cover" aria-label={`${title} project cover`}>
+    <div className="cover-glow" style={{background:`radial-gradient(circle,${theme.accent}26,transparent 60%)`}} />
+    <Frame className="cover-meeting">
+      <div className="cover-bar"><Video size={15}/><span>{theme.label}</span><span className="live-pill">LIVE</span></div>
+      <div className="meeting-grid"><div/><div/><div/><div/></div>
+      <div className="meeting-controls"><span/><span/><span/><span/><b>End</b></div>
+    </Frame>
+    <div className="cover-caption"><span style={{color:theme.accent}}>MEETING APP</span><b>Connect · Collaborate · Meet</b></div>
+  </div>
+
+  return <div className="project-cover" aria-label={`${title} project cover`}>
+    <div className="cover-glow" style={{background:`radial-gradient(circle,${theme.accent}26,transparent 60%)`}} />
+    <Frame className="cover-workflow">
+      <div className="cover-bar"><Workflow size={15}/><span>{theme.label}</span><span className="cover-status">AUTOMATED</span></div>
+      <div className="workflow-canvas"><div className="flow-node"><Zap size={15}/><span>Trigger</span></div><div className="flow-line"/><div className="flow-node"><GitBranch size={15}/><span>API</span></div><div className="flow-line"/><div className="flow-node"><Database size={15}/><span>Output</span></div></div>
+      <div className="workflow-footer"><span>Zapier</span><span>Make.com</span><span>Webhooks</span><span>JSON</span></div>
+    </Frame>
+    <div className="cover-caption"><span style={{color:theme.accent}}>API + WORKFLOW</span><b>Connect systems. Automate work.</b></div>
+  </div>
+}
