@@ -14,7 +14,7 @@ function localAnswer(question:string){
 
   if (/who|about|george|profile|background|journey/.test(q)) {
     add('About George','/about')
-    return {text:`George Owulama Andzutsi is an AI Engineer & Software Engineer whose work connects web development, software engineering, AI/LLM integration, APIs, automation and practical digital solutions. His career story combines independent engineering work with NASITDEA, the Nigerian Jubilee Fellows Programme (NJFP), NYSC, industrial training and other technical environments.` ,sources}
+    return {text:`George Owulama Andzutsi is an AI Engineer & Software Engineer whose work connects web development, software engineering, AI/LLM integration, APIs, automation and practical digital solutions. His career story combines independent engineering work with NASITDEA, the Nigerian Jubilee Fellows Programme (NJFP), NYSC, industrial training and other technical environments.`,sources}
   }
   if (/hire|contact|work with|start|project|consult/.test(q)) {
     add('Start a project','/start-a-project'); add('Contact','/contact')
@@ -22,7 +22,7 @@ function localAnswer(question:string){
   }
   if (/skill|technology|stack|tech|python|react|typescript|fastapi|openai|gemini|anthropic|groq|redis|postgres|supabase|mongo/.test(q)) {
     add('Skills','/skills')
-    return {text:`George's current technical profile spans React.js, TypeScript, JavaScript, Python, FastAPI, REST APIs, authentication, databases, Docker, Git/GitHub, Vercel, Netlify, Railway, Render, Zapier and Make.com. AI/LLM work includes OpenAI, Anthropic, Google Gemini, OpenRouter and Groq, alongside prompt engineering, AI-assisted development, AI evaluation and AI agents.` ,sources}
+    return {text:`George's current technical profile spans React.js, TypeScript, JavaScript, Python, FastAPI, REST APIs, authentication, databases, Docker, Git/GitHub, Vercel, Netlify, Railway, Render, Zapier and Make.com. AI/LLM work includes OpenAI, Anthropic, Google Gemini, OpenRouter and Groq, alongside prompt engineering, AI-assisted development, AI evaluation and AI agents.`,sources}
   }
   if (/project|georgepay|codeflow|regismeet|work/.test(q)) {
     add('Projects','/projects')
@@ -71,8 +71,8 @@ export function PortfolioAssistant({fullPage=false}:{fullPage?:boolean}){
   const [open,setOpen]=useState(fullPage)
   const [question,setQuestion]=useState('')
   const [loading,setLoading]=useState(false)
-  const [messages,setMessages]=useState<Message[]>([{id:1,role:'assistant',text:'Hi. I’m George’s portfolio assistant. Ask me about his engineering background, AI/LLM work, projects, services or how to start a project.'}])
-  const suggestions=useMemo(()=>['What does George build?','Tell me about his AI experience','What technologies does he use?','How can I hire George?'],[])
+  const [messages,setMessages]=useState<Message[]>([{id:1,role:'assistant',text:'Hi 👋 I’m here to help you get to know George. Ask me about his work, projects, technical experience, or how you can work with him.'}])
+  const suggestions=useMemo(()=>['What does George build?','Show me his AI work','What is his technical stack?','I want to hire George'],[])
 
   async function submit(value=question){
     const clean=value.trim(); if(!clean||loading)return
@@ -86,16 +86,16 @@ export function PortfolioAssistant({fullPage=false}:{fullPage?:boolean}){
   function onSubmit(e:FormEvent){e.preventDefault();void submit()}
 
   const card=<div className={`assistant-card ${fullPage?'assistant-card-full':''}`}>
-    <div className="assistant-header"><span className="assistant-icon"><Bot size={18}/></span><div><strong>George's Portfolio Assistant</strong><small>{import.meta.env.VITE_PORTFOLIO_AI_ENDPOINT?'AI endpoint enabled · grounded context':'Demo mode · structured portfolio data'}</small></div>{!fullPage&&<button className="icon-btn assistant-close" onClick={()=>setOpen(false)} aria-label="Close assistant"><X size={17}/></button>}</div>
+    <div className="assistant-header"><span className="assistant-icon"><Sparkles size={18}/></span><div><strong>Chat with George’s portfolio</strong><small>Portfolio-guided answers · no invented credentials</small></div>{!fullPage&&<button className="icon-btn assistant-close" onClick={()=>setOpen(false)} aria-label="Close assistant"><X size={17}/></button>}</div>
     <div className="assistant-messages" aria-live="polite">
       {messages.map(message=><div className={`assistant-message ${message.role}`} key={message.id}><span className="message-avatar">{message.role==='assistant'?<Sparkles size={14}/>:<UserRound size={14}/>}</span><div><p>{message.text}</p>{message.sources?.length?<div className="assistant-sources">{message.sources.map(source=>source.to.startsWith('http')?<a key={source.label} href={source.to} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={12}/></a>:<Link key={source.label} to={source.to}>{source.label}<ExternalLink size={12}/></Link>)}</div>:null}</div></div>)}
       {loading&&<div className="assistant-message assistant"><span className="message-avatar"><Sparkles size={14}/></span><div><p className="typing"><i></i><i></i><i></i></p></div></div>}
     </div>
     <div className="quick-prompts">{suggestions.map(item=><button key={item} onClick={()=>void submit(item)}>{item}</button>)}</div>
-    <form className="assistant-input" onSubmit={onSubmit}><input aria-label="Ask the portfolio assistant" value={question} onChange={e=>setQuestion(e.target.value)} placeholder="Ask about George..."/><button type="submit" aria-label="Send question" disabled={loading||!question.trim()}><Send size={17}/></button></form>
-    <small className="assistant-disclaimer">Answers are grounded in portfolio data. Unverified facts are not presented as facts.</small>
+    <form className="assistant-input" onSubmit={onSubmit}><input aria-label="Ask the portfolio assistant" value={question} onChange={e=>setQuestion(e.target.value)} placeholder="Ask me about George..."/><button type="submit" aria-label="Send question" disabled={loading||!question.trim()}><Send size={17}/></button></form>
+    <small className="assistant-disclaimer">Built from verified portfolio information. When the portfolio does not support an answer, the assistant says so.</small>
   </div>
 
-  if(fullPage) return <section className="section"><div className="container assistant-page"><div className="assistant-page-intro"><p className="eyebrow">AI PORTFOLIO DEMO</p><h1>Ask George's portfolio.</h1><p className="lead">A transparent AI interface designed to demonstrate how structured portfolio knowledge can power a useful assistant without inventing credentials, clients or results.</p></div>{card}</div></section>
-  return <section className="section section-alt"><div className="container assistant-grid"><div><p className="eyebrow">PORTFOLIO AI</p><h2>Ask the portfolio.</h2><p className="lead">Explore George's career, engineering skills, projects and services through a grounded assistant demo.</p><div className="assistant-stats"><span><b>{projects.length}</b> project records</span><span><b>{services.length}</b> service areas</span><span><b>{skills.length}</b> skill groups</span></div><Link className="text-link" to="/ai-assistant">Open full assistant <ExternalLink size={14}/></Link></div>{open?card:<button className="assistant-launch" onClick={()=>setOpen(true)}><Bot size={18}/><span>Open portfolio assistant</span></button>}</div></section>
+  if(fullPage) return <section className="section"><div className="container assistant-page"><div className="assistant-page-intro"><p className="eyebrow">GET TO KNOW GEORGE</p><h1>Have a question?</h1><p className="lead">Ask about George’s projects, engineering experience, AI work, services or how to start a conversation. The assistant stays grounded in the portfolio.</p></div>{card}</div></section>
+  return <section className="section section-alt"><div className="container assistant-grid"><div><p className="eyebrow">A QUICK CONVERSATION</p><h2>Get to know the work.</h2><p className="lead">Ask the portfolio about George’s projects, technical experience, AI work or ways to collaborate.</p><div className="assistant-stats"><span><b>{projects.length}</b> project records</span><span><b>{services.length}</b> service areas</span><span><b>{skills.length}</b> skill groups</span></div><Link className="text-link" to="/ai-assistant">Open full conversation <ExternalLink size={14}/></Link></div>{open?card:<button className="assistant-launch" onClick={()=>setOpen(true)}><Sparkles size={18}/><span>Start a conversation</span></button>}</div></section>
 }
