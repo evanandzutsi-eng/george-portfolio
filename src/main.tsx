@@ -5,4 +5,5 @@ import App from './App'
 import './styles.css'
 import './mobile-overrides.css'
 import './friendly-assistant.css'
+import './editorial-refinements.css'
 ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><App/></BrowserRouter></React.StrictMode>)
