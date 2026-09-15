@@ -1,0 +1,19 @@
+/* Editorial refinement layer: less dashboard, more personal studio. */
+.eyebrow{letter-spacing:.16em;font-size:10px;font-weight:700}
+.section-heading,.section h2,.section h1{letter-spacing:-.035em}
+.text-link{font-weight:700}
+.project-card,.service-card,.skill-card,.case-study-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.project-card:hover,.service-card:hover,.skill-card:hover,.case-study-card:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(0,0,0,.10)}
+.project-card .project-cover{border-radius:18px;margin-bottom:22px;overflow:hidden}
+.project-card .project-body{padding-top:0}
+.service-card p,.skill-card p{max-width:48ch}
+.hero-copy .eyebrow{margin-bottom:14px}
+.hero-copy h1{max-width:10ch}
+.hero-copy .lead{max-width:62ch}
+.contact-card,.contact-panel{border-radius:24px}
+.footer{border-top:1px solid var(--line)}
+.assistant-page-intro{max-width:760px;margin-bottom:28px}
+.assistant-page-intro .lead{max-width:680px}
+.assistant-grid>div:first-child{padding-right:24px}
+@media(max-width:900px){.assistant-grid>div:first-child{padding-right:0}.hero-copy h1{max-width:12ch}}
+@media(prefers-reduced-motion:reduce){.project-card,.service-card,.skill-card,.case-study-card{transition:none}.project-card:hover,.service-card:hover,.skill-card:hover,.case-study-card:hover{transform:none}}
