@@ -2,12 +2,12 @@ export const site = {
   name: 'George Owulama Andzutsi',
   shortName: 'George Andzutsi',
   title: 'AI Engineer & Software Engineer',
-  currentRole: 'Web Developer | AI Integration | Automation',
-  positioning: 'Web Development · AI / LLM Integration · Automation · APIs · Full-Stack Engineering',
-  description: 'George Owulama Andzutsi is an AI Engineer and Software Engineer whose work connects web development, AI and LLM integration, API engineering, automation and practical digital solutions.',
-  professionalSummary: 'AI Engineer and Software Engineer with a practical foundation in web development, React.js, TypeScript, JavaScript, REST APIs and third-party integrations. Builds responsive interfaces, connects applications to services such as Paystack, and works across Python, FastAPI, Node.js, databases and cloud deployment. Also works with AI and LLM APIs including OpenAI, Anthropic, Google Gemini, OpenRouter and Groq, alongside prompt engineering, AI-assisted development, AI evaluation and workflow automation with Zapier and Make.com. Experience spans independent engineering projects, digital-economy work, professional development programmes and practical technical environments.',
-  experienceYears: '3+ years of professional and practical experience',
-  email: 'andzutsiowulama@outlook.com',
+  currentRole: 'Full Stack Software Engineer | AI Applications | REST APIs | Python | React.js',
+  positioning: 'Web Development · AI Applications · REST APIs · API Integration · Workflow Automation · Full-Stack Engineering',
+  description: 'George Owulama Andzutsi is an early-career full stack software engineer with practical experience building web applications, integrating APIs and third-party services, and developing AI applications and workflow automations.',
+  professionalSummary: 'Early career software engineer with practical full stack development experience and a growing specialization in AI applications, API integration and workflow automation. Builds web applications end to end, working with React.js, TypeScript and JavaScript on the frontend and Node.js, Express, Python and FastAPI on the backend, connecting both layers through REST APIs. Comfortable integrating third party services, working with relational and non relational databases, and handling authentication flows during development. Applies AI APIs and AI assisted development practices directly in project work, including prompt refinement and evaluation of AI generated output rather than accepting it uncritically. Tests and debugs applications using Postman and Jest, works daily in Git and GitHub, and is comfortable with Docker, Windows Terminal, PowerShell and general CLI workflows. Approaches unfamiliar technical problems methodically through documentation, experimentation and direct validation. Strong written communication and research background, supported by a B.Sc. in Mass Communication and field research leadership experience.',
+  experienceYears: 'Early-career software engineer',
+  email: 'andzutsiowulama@gmail.com',
   phone: '+2348100362060',
   location: 'Nigeria',
   remote: 'Remote · Available for global collaboration',
@@ -15,7 +15,7 @@ export const site = {
   github: 'https://github.com/evanandzutsi-eng',
   linkedin: 'https://www.linkedin.com/in/george-andzutsi-833948268',
   x: 'https://x.com/Andzutsi_',
-  whatsapp: 'https://api.whatsapp.com/send/?phone=2348100362060&text&type=phone_number&app_absent=0&wame_ctl=1',
+  whatsapp: 'https://wa.me/2348100362060',
   facebook: 'https://www.facebook.com/profile.php?id=61588327748153&mibextid=ZbWKwL',
   telegram: 'https://t.me/George_buddy',
   youtube: 'https://youtube.com/@evanandzutsi?si=k9tV1DxsO9iBSWLc',
@@ -23,19 +23,26 @@ export const site = {
   contactEndpoint: '[CONTACT_ENDPOINT]',
   profileImage: { avif: '/assets/images/profile/george-profile.avif', webp: '/assets/images/profile/george-profile.webp', fallback: '/assets/images/profile/george-profile.webp' },
   heroImage: { avif: '/assets/images/hero/george-hero.avif', webp: '/assets/images/hero/george-hero.webp', fallback: '/assets/images/hero/george-hero.webp' },
-  cv: '/assets/George_Andzutsi_Web_Developer_CV_99xAutomation.pdf',
-  certification: {
-    name: 'Scientific Computing with Python',
-    issuer: 'freeCodeCamp',
-    date: '',
-    credentialUrl: '',
-  },
+  cv: '/assets/George_Andzutsi_Master_Resume.pdf',
+  certification: { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: 'https://freecodecamp.org/certification/fcc-74269a2b-0e4c-4508-b7e3-299ebc76e4cf-python-v9' },
   certifications: [
-    { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: '' },
+    { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: 'https://freecodecamp.org/certification/fcc-74269a2b-0e4c-4508-b7e3-299ebc76e4cf-python-v9' },
     { name: 'Mastercard Foundation PREP2SOAR', issuer: 'Mastercard Foundation', date: '2026', credentialUrl: '' },
   ],
-  education: 'Bachelor of Science (B.Sc.) in Mass Communication — Nasarawa State University, Keffi, Nigeria',
+  education: 'B.Sc. Mass Communication — Nasarawa State University, Keffi, Nigeria',
 }
+
+export function whatsappUrl(){ return site.whatsapp }
+export function isPlaceholder(value:string){ return !value || value.startsWith('[') || value === '#' }
+export const socialLinks = [
+  {key:'github',label:'GitHub',url:site.github},
+  {key:'linkedin',label:'LinkedIn',url:site.linkedin},
+  {key:'x',label:'X',url:site.x},
+  {key:'whatsapp',label:'WhatsApp',url:site.whatsapp},
+  {key:'facebook',label:'Facebook',url:site.facebook},
+  {key:'telegram',label:'Telegram',url:site.telegram},
+  {key:'youtube',label:'YouTube',url:site.youtube},
+]
 
 export const navLinks = [
   ['Home','/'], ['About','/about'], ['Skills','/skills'], ['Projects','/projects'],
@@ -44,171 +51,114 @@ export const navLinks = [
 ] as const
 
 export const skills = [
-  { category:'Frontend Development', icon:'PanelsTopLeft', description:'Responsive, component-based frontend development and interface implementation.', items:['HTML5','CSS3','JavaScript (ES6+)','TypeScript','React.js','Reusable Components','Responsive UI Development','Frontend Architecture','Performance Optimization'] },
-  { category:'APIs & Integrations', icon:'ServerCog', description:'Connecting frontend applications to APIs, third-party services and authentication flows.', items:['REST APIs','Third-Party API Integration','JWT','OAuth','Webhooks','JSON','Payment API Integration','Postman'] },
-  { category:'Backend Exposure', icon:'Database', description:'Backend technologies used to support API-connected applications and data workflows.', items:['Node.js','Python','FastAPI','REST API Development'] },
-  { category:'Databases & Data', icon:'Database', description:'Practical exposure to relational, document, hosted and in-memory data services.', items:['MySQL','MongoDB','Supabase','Neon','Redis','Upstash'] },
-  { category:'Automation & AI', icon:'Workflow', description:'Automation and AI-assisted workflows that connect applications and digital operations.', items:['Zapier','Make.com','API-Based Workflows','AI-assisted Development','Prompt Engineering','OpenAI APIs','Anthropic APIs','Google Gemini','OpenRouter','Groq','LLM Integration','AI Agents','AI Evaluation'] },
-  { category:'Design & UI/UX', icon:'PanelsTopLeft', description:'Translating design files and interface concepts into clear, responsive products.', items:['Figma','UI/UX Design','Responsive Interface Design','Typography','Layout & Spacing'] },
-  { category:'Development & Delivery', icon:'CloudCog', description:'Tools and platforms used to build, troubleshoot, version, containerize and deploy applications.', items:['Git','GitHub','Docker','VS Code','Windows Terminal','PowerShell','Vercel','Netlify','Railway','Render'] },
-  { category:'Troubleshooting & Quality', icon:'ShieldCheck', description:'A practical approach to debugging, integration testing and validating fixes before release.', items:['Bug Fixing','API Troubleshooting','Website Troubleshooting','Integration Testing','Code Review','Technical Problem Solving','Cross-browser Testing'] },
+  { category:'Programming', icon:'Code2', description:'Core languages used across frontend, backend and application development.', items:['Python','TypeScript','JavaScript (ES6+)','HTML5','CSS3'] },
+  { category:'Frontend Development', icon:'PanelsTopLeft', description:'Responsive interfaces and reusable components built around practical product requirements.', items:['React.js','Responsive Interfaces','Reusable Components','Figma','UI/UX'] },
+  { category:'Backend & APIs', icon:'ServerCog', description:'Backend services and API-driven application architecture.', items:['Node.js','Express','Python','FastAPI','REST APIs','REST API Development','REST API Consumption'] },
+  { category:'APIs & Integrations', icon:'Workflow', description:'Connecting applications with third-party services and authentication systems.', items:['Third Party API Integration','Authentication','JWT','OAuth','Webhooks','Paystack','API Testing','Postman'] },
+  { category:'Databases & Data', icon:'Database', description:'Practical relational, non-relational, hosted and in-memory data work.', items:['MySQL','MongoDB','Supabase','Neon','Redis','Upstash','Basic SQL'] },
+  { category:'Testing & Debugging', icon:'ShieldCheck', description:'Iterative testing and troubleshooting across application layers.', items:['Postman','Jest','Manual Testing','API Testing','Debugging','Troubleshooting','Iterative Testing'] },
+  { category:'AI & Automation', icon:'Sparkles', description:'Practical AI application work, AI-assisted development and workflow automation.', items:['AI API Integration','AI Applications','AI-assisted Development','Prompt Engineering','Prompt Refinement','AI Response Evaluation','AI Behavioral Testing','Context Handling','Instruction Adherence Testing','Zapier','Make.com','API-Based Workflows','AI Workflow Experimentation','Agentic AI Concepts'] },
+  { category:'Development & Delivery', icon:'CloudCog', description:'Tools used for source control, local development, deployment and CLI workflows.', items:['Git','GitHub','Docker','Windows Terminal','PowerShell','CLI Workflows','Vercel','Railway','Render','Netlify'] },
 ]
 
 export const services = [
-  {title:'Frontend Development', icon:'PanelsTopLeft', description:'Build responsive, maintainable interfaces with React.js, TypeScript and JavaScript.', deliverables:['React.js interfaces','Responsive UI','Reusable component architecture','Figma-to-React implementation']},
-  {title:'API & Third-Party Integration', icon:'ServerCog', description:'Connect web applications to REST APIs, payment services, authentication systems and external platforms.', deliverables:['REST API connections','Paystack/payment integrations','JWT/OAuth flows','Webhook and JSON handling']},
-  {title:'Workflow Automation', icon:'Workflow', description:'Automate repetitive digital processes with Zapier, Make.com, APIs, webhooks and structured data flows.', deliverables:['Workflow mapping','Trigger/action setup','API and webhook connections','Workflow troubleshooting']},
-  {title:'AI Integration & AI-Assisted Development', icon:'Sparkles', description:'Add practical AI capabilities to software workflows while keeping the surrounding engineering reliable and maintainable.', deliverables:['AI feature integration','Prompt and workflow design','AI-assisted development workflows','Integration testing']},
-  {title:'Website Troubleshooting & Optimization', icon:'ShieldCheck', description:'Investigate frontend, API and integration problems, apply fixes and validate results before considering an issue resolved.', deliverables:['Bug investigation','API troubleshooting','Regression checks','Performance and maintainability improvements']},
-  {title:'Technical Support & UI Implementation', icon:'Lightbulb', description:'Turn interface concepts into working products and support teams through implementation, testing and documentation.', deliverables:['Figma implementation','Responsive layouts','Technical documentation','Clear implementation communication']},
+  {title:'Full-Stack Web Development', icon:'PanelsTopLeft', description:'Build responsive web applications across React.js frontends, backend services and REST APIs.', deliverables:['React.js interfaces','Node.js / Express backends','Python / FastAPI services','API-connected application flows']},
+  {title:'API & Third-Party Integration', icon:'ServerCog', description:'Connect applications to external services, payment platforms, authentication systems and APIs.', deliverables:['REST API integration','Third-party services','Paystack workflows','JWT/OAuth','Webhooks and JSON']},
+  {title:'AI Application Integration', icon:'Sparkles', description:'Integrate AI APIs into useful software workflows and application backends without presenting experimentation as production AI engineering.', deliverables:['AI API integration','Prompt refinement','AI response evaluation','Context and instruction testing']},
+  {title:'Workflow Automation', icon:'Workflow', description:'Connect business tools, APIs and repetitive processes through practical automation workflows.', deliverables:['Zapier workflows','Make.com workflows','API/webhook connections','Gmail and notification flows']},
+  {title:'Testing, Debugging & Troubleshooting', icon:'ShieldCheck', description:'Investigate frontend, backend, API and deployment issues through structured testing and iteration.', deliverables:['Postman testing','Jest tests','Manual testing','Integration troubleshooting']},
+  {title:'UI Implementation & Technical Support', icon:'Lightbulb', description:'Translate interface concepts into working responsive products and support technical implementation.', deliverables:['Figma-to-React implementation','Responsive interfaces','Technical investigation','Documentation and communication']},
 ]
 
 export const projects = [
   {
-    slug:'georgepay',
-    title:'GeorgePay — Fintech Web Application',
-    category:'Full Stack',
-    tags:['Full Stack','Fintech','Web Application','APIs'],
-    description:'A fintech web application built end-to-end with TypeScript and React.js, including payment, authentication and REST API integration work.',
-    problem:'Build a responsive fintech-oriented web application while connecting the user interface to payment, authentication and API-driven functionality.',
-    solution:'Built GeorgePay with TypeScript and React.js, integrated Paystack for payment processing, implemented authentication and session handling, and connected the frontend to REST API endpoints.',
-    architecture:'React / TypeScript UI → REST API → Authentication / Application Logic → Paystack Payment Service',
-    decisions:['Use reusable React components for maintainability.','Keep payment and API communication behind clear integration boundaries.','Test request/response behavior with Postman while troubleshooting integration issues.'],
-    security:'Authentication and payment-related flows require secure handling of credentials, validated requests and protected server-side secrets. No private credentials are exposed in the portfolio.',
-    deployment:'Public demo deployed on Vercel.',
-    outcome:'A live fintech application demonstrating responsive frontend development, payment integration, authentication and API troubleshooting.',
-    stack:['TypeScript','React.js','REST APIs','Paystack','Authentication','Vercel'],
-    status:'Live Demo',
-    evidence:'Public live application',
-    role:'Full-stack implementation · Frontend · API integration',
-    proof:['Responsive React/TypeScript interface','Paystack payment integration','Authentication and session handling','REST API integration and troubleshooting'],
-    links:{github:'',live:'https://georgepay-web-al53.vercel.app/'},
-  },
-  {
-    slug:'codeflow-ai',
-    title:'CodeFlow — Software Development Platform',
-    category:'AI',
-    tags:['AI','Web Application','APIs'],
-    description:'A software development platform with a React.js frontend and REST API integration, designed around a multi-model AI experience.',
-    problem:'Create a usable web experience around multiple AI models while keeping frontend components reusable and API-driven.',
-    solution:'Built the frontend with JavaScript and React.js, developed reusable components for core interface elements and integrated REST APIs for application data and requests.',
-    architecture:'React UI → REST API / Integration Layer → AI Model Services → Response',
-    decisions:['Separate API integration concerns from reusable interface components.','Design the interface around the user task rather than a specific model provider.','Test frontend request handling and debug integration issues before deployment.'],
-    security:'AI provider credentials should remain outside client-side code, with validated requests and controlled server-side integration boundaries in production.',
-    deployment:'Public demo deployed on Vercel.',
-    outcome:'A working public AI-oriented application demonstrating React development, API integration and practical multi-model product implementation.',
-    stack:['JavaScript','React.js','REST APIs','AI Model APIs','Vercel'],
-    status:'Live Demo',
-    evidence:'Public live application',
-    role:'Frontend implementation · API integration · AI product interface',
-    proof:['React.js reusable components','REST API integration','Multi-model AI-oriented experience','Frontend request handling and troubleshooting'],
+    slug:'codeflow-ai', title:'CodeFlow — AI Powered Coding Assistant Platform', category:'AI', tags:['AI','Full Stack','Web Application','APIs'],
+    description:'A live AI-powered coding assistant platform with a React frontend, Node.js/Express backend, multi-provider AI integration, image generation, MongoDB and Paystack billing.',
+    problem:'Build a practical coding-assistant application that could combine conversational AI, application data, billing and multiple AI providers while remaining usable when a provider fails.',
+    solution:'Built a React frontend and Node.js/Express backend, integrated Google Gemini as the primary AI provider and Groq Llama 3 as a fallback, added image generation through Hugging Face and Pollinations, integrated MongoDB and Paystack billing, and used a circuit-breaker approach for provider failures.',
+    architecture:'React UI → Node.js / Express API → AI Provider Layer → Gemini / Groq + Image Providers → MongoDB / Paystack',
+    decisions:['Use multiple AI providers to reduce dependence on a single provider.','Use circuit-breaker behavior around provider failures.','Test streaming responses and deployment configuration iteratively.'],
+    security:'AI provider credentials and payment secrets should remain server-side. Application requests and provider responses require validation and controlled integration boundaries.',
+    deployment:'Deployed and tested through Railway and Vercel.',
+    outcome:'A live AI application demonstrating full-stack development, multi-provider AI integration, billing, image generation and hands-on AI behavioral testing.',
+    stack:['JavaScript','React.js','Node.js','Express','MongoDB','REST APIs','Google Gemini','Groq Llama 3','Hugging Face','Pollinations','Paystack','Railway','Vercel'],
+    status:'Live Demo', evidence:'Public live application', role:'Full-stack implementation · AI integration · API integration · Testing',
+    proof:['Live AI coding assistant','Gemini primary + Groq fallback','Image generation integrations','MongoDB application data','Paystack billing','Circuit-breaker approach','Railway + Vercel deployment','AI behavioral testing and evaluation'],
     links:{github:'',live:'https://codeflow-app-mu.vercel.app/'},
   },
   {
-    slug:'regismeet',
-    title:'RegisMeet — Meeting Web Application',
-    category:'Backend',
-    tags:['Backend','Web Application','APIs'],
-    description:'An active-development meeting web application using Python, Upstash Redis and Neon as part of its backend and data layer.',
-    problem:'Develop a meeting-oriented web application with backend logic and persistent data services.',
-    solution:'Currently building RegisMeet in Python, using Upstash Redis and Neon as part of the data layer and GitHub for version control.',
-    architecture:'Web Application → Python Backend → Redis / Upstash + Neon Data Layer',
-    decisions:['Keep data services explicit and separated from application logic.','Use GitHub for version control and incremental development.','Treat the project as active development rather than presenting unfinished functionality as production-ready.'],
-    security:'Production deployment should protect database credentials, validate user input and secure backend endpoints. No private credentials are exposed in the portfolio.',
-    deployment:'Active development; no production deployment claim is made.',
-    outcome:'An active engineering project demonstrating backend development and practical data-layer integration.',
-    stack:['Python','Upstash','Redis','Neon','GitHub'],
-    status:'Active Development',
-    evidence:'Active development project',
-    role:'Backend development · Data-layer integration',
-    proof:['Python backend development','Upstash Redis integration','Neon data layer','GitHub-based incremental development'],
-    links:{github:'',live:''},
+    slug:'georgepay', title:'GeorgePay — Fintech Web Application', category:'Full Stack', tags:['Full Stack','Fintech','Web Application','APIs'],
+    description:'A fintech web application built with TypeScript and React.js, including REST API integration, authentication, database functionality and Paystack payment workflows.',
+    problem:'Build a practical fintech web application connecting frontend workflows to backend logic, user access and payment functionality.',
+    solution:'Built the application with TypeScript and React.js, connected frontend workflows to backend logic through REST APIs, implemented authentication and database functionality, and integrated Paystack for payment-related workflows.',
+    architecture:'React / TypeScript UI → REST APIs → Backend Logic → Database + Authentication + Paystack',
+    decisions:['Use reusable React components for maintainability.','Keep payment and API communication behind explicit integration boundaries.','Test application behavior iteratively and resolve integration issues during development.'],
+    security:'Authentication, payment credentials and database credentials should be protected server-side with validated requests and secure configuration.',
+    deployment:'Public demo deployed on Vercel.',
+    outcome:'A live fintech application demonstrating frontend development, API integration, authentication, database integration and payment workflows.',
+    stack:['TypeScript','React.js','REST APIs','Paystack','Authentication','Database Integration','Vercel'],
+    status:'Live Demo', evidence:'Public live application', role:'Full-stack implementation · Frontend · API integration',
+    proof:['React/TypeScript application','REST API integration','Authentication','Database functionality','Paystack integration','Integration troubleshooting'],
+    links:{github:'',live:'https://georgepay-web-al53.vercel.app/'},
   },
   {
-    slug:'workflow-automation-api-integration',
-    title:'Workflow Automation & API Integration',
-    category:'Automation',
-    tags:['Automation','APIs'],
-    description:'Practical automation work using Zapier and Make.com to connect APIs, webhooks and digital operations.',
-    problem:'Reduce repetitive work by connecting services and business steps into repeatable digital workflows.',
-    solution:'Build and troubleshoot automation workflows using triggers, actions, APIs, webhooks and structured JSON data flows.',
-    architecture:'Trigger → Webhook / API → Workflow Logic → External Service → Output',
-    decisions:['Use automation platforms where they reduce unnecessary implementation overhead.','Keep workflow steps explicit so failures can be isolated and debugged.','Test triggers and outputs before considering a workflow reliable.'],
-    security:'API credentials, webhook endpoints and connected service tokens should be protected as secrets and configured with appropriate access controls.',
-    deployment:'Workflow-specific configuration; no single public deployment is claimed.',
-    outcome:'Practical experience connecting digital services and automating repetitive workflows.',
-    stack:['Zapier','Make.com','REST APIs','Webhooks','JSON'],
-    status:'Professional Work / Reference',
-    evidence:'Professional engineering reference',
-    role:'Automation · API integration · Workflow troubleshooting',
-    proof:['Zapier workflow automation','Make.com workflow automation','API and webhook connections','Structured JSON data flows'],
-    links:{github:'',live:''},
+    slug:'regismeet', title:'RegisMeet — Meeting Web Application', category:'Backend', tags:['Backend','Web Application','APIs'],
+    description:'An active-development meeting web application using Python, Upstash Redis, Redis and Neon for backend logic and data infrastructure.',
+    problem:'Develop meeting-oriented application functionality with backend logic, fast key-based access and persistent database infrastructure.',
+    solution:'Developing RegisMeet with Python, using Upstash Redis for fast key-based data access and Neon for persistent database infrastructure, while testing and refining backend behavior iteratively.',
+    architecture:'Web Application → Python Backend → Upstash Redis + Neon → Application State / Data',
+    decisions:['Keep data services explicit and separated from application logic.','Use iterative testing as functionality is developed.','Use GitHub throughout development for version control.'],
+    security:'Production deployment should protect database credentials, validate inputs and secure backend endpoints.',
+    deployment:'Active development; no production deployment claim is made.',
+    outcome:'An active backend project demonstrating Python development, Redis usage, persistent database infrastructure and iterative testing.',
+    stack:['Python','Upstash Redis','Redis','Neon','GitHub'], status:'Active Development', evidence:'Active development project',
+    role:'Backend development · Data-layer integration', proof:['Python backend logic','Upstash Redis','Neon infrastructure','Iterative testing','GitHub version control'], links:{github:'',live:''},
+  },
+  {
+    slug:'verdant-foundation', title:'Verdant Foundation Website', category:'Full Stack', tags:['Full Stack','Web Application','Frontend'],
+    description:'A responsive foundation website built with React.js, JavaScript and Node.js, including a donations feature and Neon-backed application data.',
+    problem:'Create a practical foundation website with a usable interface and an online donation workflow.',
+    solution:'Built the website end to end with React.js, JavaScript and Node.js, implemented a donations feature for direct contributions and used Neon for application data.',
+    architecture:'React UI → Node.js Application Logic → Neon Data Layer → Donation Workflow',
+    decisions:['Prioritize practical usability over decorative design.','Build the interface responsively for different screen sizes.','Handle the site as an end-to-end application rather than a static presentation only.'],
+    security:'Donation and application data should use validated inputs, protected credentials and secure server-side handling.',
+    deployment:'Portfolio project; deployment details are not specified in the current resume.',
+    outcome:'A complete responsive foundation website with donation functionality and backend/data integration.',
+    stack:['React.js','JavaScript','Node.js','Neon'], status:'Completed Project', evidence:'Portfolio project', role:'End-to-end development', proof:['Responsive React interface','Donations feature','Node.js application logic','Neon data layer'], links:{github:'',live:''},
+  },
+  {
+    slug:'ai-report-processing', title:'AI Report Processing Prototype', category:'AI', tags:['AI','Python','Prototype'],
+    description:'A practical prototype for processing student reports, school sheets and health reports using Python, Google Colab and the Groq API.',
+    problem:'Explore whether AI could assist with processing different structured report types and producing useful outputs.',
+    solution:'Built and tested a prototype in Google Colab using the Groq API, experimenting with AI-generated processing and structured output across student, school and health report types.',
+    architecture:'Google Colab / Python → Groq API → AI Processing → Structured Output',
+    decisions:['Use a notebook environment for fast experimentation.','Refine the workflow from observed testing results rather than treating the first output as final.','Evaluate structured output across different report contexts.'],
+    security:'Health-related information should be handled with appropriate privacy, access and data-protection controls in any real deployment. This portfolio item is presented as a prototype, not a production health system.',
+    deployment:'Prototype developed and tested in Google Colab; no production deployment claim is made.',
+    outcome:'A hands-on AI prototype demonstrating API integration, structured processing experimentation and iterative evaluation.',
+    stack:['Python','Google Colab','Groq API'], status:'Prototype', evidence:'Development prototype', role:'AI application experimentation', proof:['Groq API integration','Google Colab development','Multiple report types','Structured output experimentation'], links:{github:'',live:''},
+  },
+  {
+    slug:'workflow-automation-api-integration', title:'Workflow Automation & API Integration', category:'Automation', tags:['Automation','APIs','Workflow'],
+    description:'Workflow automation experiments using Zapier and Make.com with APIs, webhooks, Gmail, Discord and CRM integration flows.',
+    problem:'Connect repetitive digital tasks and business processes into practical, repeatable workflows.',
+    solution:'Built and tested automation workflows using Zapier and Make.com, connecting triggers, actions, APIs, webhooks, Gmail, Discord and CRM-related flows, including experiments with AI-powered business workflows.',
+    architecture:'Trigger → API / Webhook → Automation Logic → Gmail / Discord / CRM / External Service → Output',
+    decisions:['Use automation platforms where they reduce unnecessary implementation overhead.','Test triggers, actions and outputs iteratively.','Treat AI agents and AI-powered workflows as ongoing experimentation rather than established production expertise.'],
+    security:'API credentials, webhook endpoints, CRM access and connected service tokens should be protected as secrets with appropriate access controls.',
+    deployment:'Workflow-specific configurations; no single public deployment is claimed.',
+    outcome:'Hands-on automation experience connecting services and exploring practical AI-powered business workflows.',
+    stack:['Zapier','Make.com','AI APIs','Webhooks','Gmail','Discord','CRM Integrations','REST APIs'], status:'Professional Work / Experimentation', evidence:'Workflow automation experiments', role:'Automation · API integration · Workflow testing', proof:['Zapier','Make.com','Gmail integration','Discord notifications','CRM integration flows','API/webhook workflows'], links:{github:'',live:''},
   },
 ]
 
 export const experience = [
-  {
-    period:'2024 — Present',
-    role:'Web Developer & Software Engineer | AI Integration & Automation — Independent Projects',
-    bullets:[
-      'Build responsive web applications using React.js, JavaScript, TypeScript, HTML5 and CSS3, with reusable components and responsive interfaces.',
-      'Turn Figma designs and interface concepts into functional React experiences and connect frontend applications to REST APIs and third-party services.',
-      'Work with authentication patterns including JWT and OAuth, payment integrations such as Paystack, webhooks and API-driven application flows.',
-      'Use Python, FastAPI and Node.js for backend and API work where required, alongside MySQL, MongoDB, Supabase, Neon, Redis and Upstash.',
-      'Integrate AI and LLM services including OpenAI, Anthropic, Google Gemini, OpenRouter and Groq into application and workflow contexts.',
-      'Apply prompt engineering, AI-assisted development and AI evaluation practices while keeping application behavior grounded in structured requirements.',
-      'Build automation workflows with Zapier and Make.com, connecting APIs, webhooks and third-party services to move data between systems.',
-      'Use Git, GitHub, Postman and Docker, troubleshoot frontend/backend/integration issues, and deploy through Vercel, Netlify, Railway and Render.'
-    ]
-  },
-  {
-    period:'Professional Technology Experience',
-    role:'Stack Assistant — Nasarawa State Information Technology & Digital Economy Agency (NASITDEA)',
-    bullets:[
-      'Worked within a technology and digital-economy environment as part of the broader professional journey into software engineering and AI-focused work.',
-      'Contributed to practical technology and digital work in an organizational setting.'
-    ]
-  },
-  {
-    period:'Professional Programme',
-    role:'Nigerian Jubilee Fellows Programme (NJFP)',
-    bullets:[
-      'Part of the professional development journey and broader transition toward technology-focused work.',
-      'Presented as a programme experience, distinct from conventional employment.'
-    ]
-  },
-  {
-    period:'2023 — 2024',
-    role:'NYSC Corps Member — Teacher | Junuco High School, Jos South',
-    bullets:[
-      'Worked in a structured environment requiring leadership, communication, organization and collaboration.',
-      'Managed responsibilities consistently while working with people across different needs and expectations.'
-    ]
-  },
-  {
-    period:'Industrial Training',
-    role:'National Television Authority (NTA) — Team Lead',
-    bullets:[
-      'Coordinated information gathering within the group and compiled team-collected information into structured Word and PDF documents for submission to editors.',
-      'Communicated with editors on submitted materials and coordinated the team to meet deadlines.'
-    ]
-  },
-  {
-    period:'Industrial Training',
-    role:'Option FM — Technical Operations',
-    bullets:[
-      'Monitored radio transmitters and related broadcast equipment as part of daily technical operations.',
-      'Assisted technical staff with maintenance tasks on transmitter and broadcast machinery.'
-    ]
-  },
-  {
-    period:'University Field Research',
-    role:'Team Lead — Business Owner Research Project',
-    bullets:[
-      'Led a student team gathering information directly from business owners through structured questions.',
-      'Coordinated team members, recorded information accurately and resolved challenges during fieldwork.'
-    ]
-  },
+  {period:'2025 — Present', role:'Software Developer | NASITDEA (Nasarawa State Information Technology and Digital Economy Agency)', bullets:['Integrate APIs and build backend systems to support the agency’s digital initiatives.','Work on backend development, connecting internal systems and services through API integration.']},
+  {period:'2024 — Present', role:'Independent Software Developer | Nigeria', bullets:['Build full stack web applications combining React.js frontends with Node.js, Express, Python and FastAPI backends.','Develop and consume REST APIs, connecting frontend applications with backend services and third party platforms.','Implement authentication flows and integrate third party APIs, working through credential handling and response parsing.','Design and manage application data using MySQL, MongoDB, Supabase, Neon and Redis.','Write basic SQL to query, filter, sort and validate records during development and testing.','Test APIs and application workflows using Postman, and write automated tests with Jest.','Debug and troubleshoot issues across frontend, backend and integration layers through manual and iterative testing.','Use Git and GitHub for source control, and Docker for containerized local development.','Work daily in Windows Terminal and PowerShell, building comfort with general CLI workflows.','Deploy and maintain applications through Vercel, Railway, Render and Netlify, troubleshooting deployment configuration issues as they arise.','Integrate AI APIs into application backends and use AI-assisted development tools to accelerate coding and technical research.','Refine prompts and evaluate AI-generated output through manual verification rather than accepting it directly.','Build and test workflow automations using Zapier and Make.com, connecting triggers, actions and APIs.','Research unfamiliar technologies and technical problems through documentation, experimentation and iterative testing.','Learned UI/UX design and Figma during university and applied practical interface design principles to personal project frontends.']},
+  {period:'2023 — 2024', role:'NYSC Corps Member — Teacher | Junuco High School, Jos South', bullets:['Worked in a structured environment requiring leadership, communication, organization and collaboration.']},
+  {period:'Industrial Training', role:'National Television Authority (NTA)', bullets:['Performed technical hardware and software-related responsibilities under supervision alongside communication tasks.','Worked with staff across different units, applying practical troubleshooting to technical issues as they arose.']},
+  {period:'Industrial Training', role:'Option FM', bullets:['Assisted with technical hardware and software responsibilities during industrial training.','Collaborated with team members and handled routine troubleshooting in a fast-paced broadcast environment.']},
+  {period:'University Field Research', role:'Team Lead — Business Owner Research Project | Nasarawa State University, Keffi', bullets:['Led a student field research team gathering information directly from business owners.','Coordinated team activities and communicated research requirements clearly to team members.','Worked with team members to gather information and organize findings from the field.','Communicated research findings and observations to the wider project group.']},
 ]
 
 export const education = [
@@ -220,38 +170,7 @@ export const careerInterests = [
   'Full-stack software engineering',
   'AI-assisted development and AI evaluation',
   'API engineering and third-party integrations',
-  'Workflow automation and intelligent business processes',
+  'Workflow automation',
   'Developer tools and AI-powered applications',
-  'Digital transformation and technology-enabled solutions',
-  'Secure, maintainable and user-focused software systems'
+  'Digital transformation and secure, maintainable user-focused systems',
 ]
-
-export const principles = [
-  'Understand the problem before choosing the technology.',
-  'Build useful, maintainable systems rather than demos that only look impressive.',
-  'Treat testing, reliability and data handling as part of the product.',
-  'Keep integrations observable and troubleshootable.',
-  'Design for iteration: products change as users teach you more.',
-  'Communicate technical decisions clearly with technical and non-technical stakeholders.'
-]
-
-export const socialLinks = [
-  {label:'X', key:'x', url:site.x},
-  {label:'WhatsApp',key:'whatsapp',url:site.whatsapp},
-  {label:'LinkedIn',key:'linkedin',url:site.linkedin},
-  {label:'Facebook',key:'facebook',url:site.facebook},
-  {label:'GitHub',key:'github',url:site.github},
-  {label:'Email',key:'email',url:`mailto:${site.email}`},
-  {label:'Telegram',key:'telegram',url:site.telegram},
-  {label:'Phone',key:'phone',url:`tel:${site.phone.replace(/[^+\d]/g,'')}`}
-]
-
-export function isPlaceholder(value: string) {
-  return value.startsWith('[') && value.endsWith(']')
-}
-
-export function whatsappUrl() {
-  if (isPlaceholder(site.whatsapp)) return '#'
-  const digits = site.whatsapp.replace(/\D/g, '')
-  return digits ? `https://wa.me/${digits}?text=${encodeURIComponent('Hello George, I found your portfolio and would like to discuss a project.')}` : '#'
-}
