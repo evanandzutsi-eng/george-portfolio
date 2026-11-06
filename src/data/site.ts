@@ -1,17 +1,17 @@
 export const site = {
   name: 'George Owulama Andzutsi',
   shortName: 'George Andzutsi',
-  title: 'AI Engineer & Software Engineer',
-  currentRole: 'Full Stack Software Engineer | AI Applications | REST APIs | Python | React.js',
-  positioning: 'Web Development · AI Applications · REST APIs · API Integration · Workflow Automation · Full-Stack Engineering',
-  description: 'George Owulama Andzutsi is an early-career full stack software engineer with practical experience building web applications, integrating APIs and third-party services, and developing AI applications and workflow automations.',
-  professionalSummary: 'Early career software engineer with practical full stack development experience and a growing specialization in AI applications, API integration and workflow automation. Builds web applications end to end, working with React.js, TypeScript and JavaScript on the frontend and Node.js, Express, Python and FastAPI on the backend, connecting both layers through REST APIs. Comfortable integrating third party services, working with relational and non relational databases, and handling authentication flows during development. Applies AI APIs and AI assisted development practices directly in project work, including prompt refinement and evaluation of AI generated output rather than accepting it uncritically. Tests and debugs applications using Postman and Jest, works daily in Git and GitHub, and is comfortable with Docker, Windows Terminal, PowerShell and general CLI workflows. Approaches unfamiliar technical problems methodically through documentation, experimentation and direct validation. Strong written communication and research background, supported by a B.Sc. in Mass Communication and field research leadership experience.',
-  experienceYears: 'Early-career software engineer',
+  title: 'AI/ML Engineer & Software Engineer',
+  currentRole: 'ML / Evaluation & MLOps Engineer (ML/EvalOps) | NASITDEA',
+  positioning: 'Applied AI/ML · LLM Engineering · ML Evaluation & MLOps · Python · FastAPI · Software Engineering',
+  description: 'George Owulama Andzutsi is an applied AI/ML engineer focused on LLM-powered applications, RAG, machine learning evaluation, MLOps workflows, Python backend engineering and reliable AI system integration.',
+  professionalSummary: 'Applied AI/ML engineer who designs, integrates, evaluates and deploys LLM-powered software, from RAG and conversational AI to evaluation workflows and API services. Currently ML/EvalOps Engineer at NASITDEA, assessing AI-system response quality through structured test cases, and Team Lead of the AI/ML Department at DalaCare AI, directing chatbot engineering, symptom and triage intelligence, and evaluation/MLOps workstreams for a safety-sensitive healthcare assistant. Works across the Hugging Face ecosystem and integrates OpenAI, Anthropic, Gemini, Groq and OpenRouter models into Python/FastAPI backends with Docker-based deployment, Langfuse observability and secure REST API practices. Turns real-world problems into reliable AI products and works across engineering and product stakeholders throughout the AI solution lifecycle.',
+  experienceYears: 'Applied AI/ML Engineering · LLM Integration · ML Evaluation & MLOps',
   email: 'andzutsiowulama@gmail.com',
   phone: '+2348100362060',
   location: 'Nigeria',
   remote: 'Remote · Available for global collaboration',
-  availability: 'Available Immediately',
+  availability: 'Open to Remote Opportunities',
   github: 'https://github.com/evanandzutsi-eng',
   linkedin: 'https://www.linkedin.com/in/george-andzutsi-833948268',
   x: 'https://x.com/Andzutsi_',
@@ -24,13 +24,13 @@ export const site = {
   contactEndpoint: '[CONTACT_ENDPOINT]',
   profileImage: { avif: '/assets/images/profile/george-profile.avif', webp: '/assets/images/profile/george-profile.webp', fallback: '/assets/images/profile/george-profile.webp' },
   heroImage: { avif: '/assets/images/hero/george-hero.avif', webp: '/assets/images/hero/george-hero.webp', fallback: '/assets/images/hero/george-hero.webp' },
-  cv: '/assets/George_Andzutsi_Master_Resume.pdf',
+  cv: '/assets/George_Andzutsi_AI_ML_Engineer_Resume.pdf',
   certification: { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: 'https://freecodecamp.org/certification/fcc-74269a2b-0e4c-4508-b7e3-299ebc76e4cf-python-v9' },
   certifications: [
     { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: 'https://freecodecamp.org/certification/fcc-74269a2b-0e4c-4508-b7e3-299ebc76e4cf-python-v9' },
     { name: 'Mastercard Foundation PREP2SOAR', issuer: 'Mastercard Foundation', date: '2026', credentialUrl: '' },
   ],
-  education: 'B.Sc. Mass Communication — Nasarawa State University, Keffi, Nigeria',
+  education: 'B.Sc. Mass Communication — Nasarawa State University, Keffi, Nigeria (2017–2023)',
 }
 
 export function whatsappUrl(){ return site.whatsapp }
@@ -183,16 +183,31 @@ export const projects = [
 ]
 
 export const experience = [
-  {period:'2025 — Present', role:'Software Developer | NASITDEA (Nasarawa State Information Technology and Digital Economy Agency)', bullets:['Integrate APIs and build backend systems to support the agency’s digital initiatives.','Work on backend development, connecting internal systems and services through API integration.']},
-  {period:'2024 — Present', role:'Independent Software Developer | Nigeria', bullets:['Build full stack web applications combining React.js frontends with Node.js, Express, Python and FastAPI backends.','Develop and consume REST APIs, connecting frontend applications with backend services and third party platforms.','Implement authentication flows and integrate third party APIs, working through credential handling and response parsing.','Design and manage application data using MySQL, MongoDB, Supabase, Neon and Redis.','Write basic SQL to query, filter, sort and validate records during development and testing.','Test APIs and application workflows using Postman, and write automated tests with Jest.','Debug and troubleshoot issues across frontend, backend and integration layers through manual and iterative testing.','Use Git and GitHub for source control, and Docker for containerized local development.','Work daily in Windows Terminal and PowerShell, building comfort with general CLI workflows.','Deploy and maintain applications through Vercel, Railway, Render and Netlify, troubleshooting deployment configuration issues as they arise.','Integrate AI APIs into application backends and use AI-assisted development tools to accelerate coding and technical research.','Refine prompts and evaluate AI-generated output through manual verification rather than accepting it directly.','Build and test workflow automations using Zapier and Make.com, connecting triggers, actions and APIs.','Research unfamiliar technologies and technical problems through documentation, experimentation and iterative testing.','Learned UI/UX design and Figma during university and applied practical interface design principles to personal project frontends.']},
-  {period:'2023 — 2024', role:'NYSC Corps Member — Teacher | Junuco High School, Jos South', bullets:['Worked in a structured environment requiring leadership, communication, organization and collaboration.']},
-  {period:'Industrial Training', role:'National Television Authority (NTA)', bullets:['Performed technical hardware and software-related responsibilities under supervision alongside communication tasks.','Worked with staff across different units, applying practical troubleshooting to technical issues as they arose.']},
-  {period:'Industrial Training', role:'Option FM', bullets:['Assisted with technical hardware and software responsibilities during industrial training.','Collaborated with team members and handled routine troubleshooting in a fast-paced broadcast environment.']},
-  {period:'University Field Research', role:'Team Lead — Business Owner Research Project | Nasarawa State University, Keffi', bullets:['Led a student field research team gathering information directly from business owners.','Coordinated team activities and communicated research requirements clearly to team members.','Worked with team members to gather information and organize findings from the field.','Communicated research findings and observations to the wider project group.']},
+  {period:'2026 — Present', role:'ML / Evaluation & MLOps Engineer (ML/EvalOps) | Nasarawa State Information and Digital Economy Agency (NASITDEA)', bullets:[
+    'Support machine learning and AI engineering workflows, contributing to model evaluation and assessment of AI-system responses for quality, consistency and reliability.',
+    'Work with evaluation datasets, test cases and structured assessment processes; maintain evaluation and experiment documentation.',
+    'Support experiment tracking and model-versioning practices so evaluation results remain comparable and reproducible.',
+    'Collaborate with software developers and technical stakeholders on integrating, testing and improving AI-powered systems.',
+    'Apply software engineering practices including version control, testing and documentation to ML and evaluation workflows.'
+  ]},
+  {period:'Team Leadership', role:'Team Lead, AI/ML Department | DalaCare AI', bullets:[
+    'Lead and coordinate the AI/ML department across chatbot engineering, symptom and triage intelligence, and evaluation/MLOps workstreams.',
+    'Provide technical direction on LLM integration, conversational response quality and AI system architecture; review technical contributions and guide cross-functional integration.',
+    'Guide task allocation, sprint planning and delivery priorities; coordinate evaluation strategy and structured test-case development.',
+    'Keep AI behavior aligned with product requirements and healthcare safety expectations.'
+  ]},
+  {period:'2024 — Present', role:'Independent Full-Stack Software Engineer | AI Integration & Automation', bullets:[
+    'Build intelligent applications with Python, FastAPI, JavaScript, TypeScript and React, integrating LLM providers including OpenAI, Anthropic, Google Gemini, Groq and OpenRouter.',
+    'Design backend services and REST APIs; develop AI-powered assistants, conversational systems and automated workflows from product requirements.',
+    'Implement authentication, authorization, request validation and rate limiting; work with PostgreSQL, MongoDB and Supabase.',
+    'Deploy and maintain applications with Docker, Railway, Render, Vercel and Netlify; debug, test and iterate to improve reliability.'
+  ]}
 ]
 
 export const education = [
-  {period:'2018 — 2023', title:'Bachelor of Science (B.Sc.) in Mass Communication', institution:'Nasarawa State University, Keffi, Nigeria'}
+  {period:'2017 — 2023', title:'BSc, Mass Communication', institution:'Nasarawa State University, Keffi (NSUK)'},
+  {period:'2023 — 2024', title:'National Youth Service Corps (NYSC)', institution:'Jos South, Jos, Plateau State, Nigeria'},
+  {period:'2012 — 2017', title:'Secondary School Education', institution:'St. John Bosco Secondary School, Doma, Nasarawa State, Nigeria'}
 ]
 
 export const careerInterests = [
