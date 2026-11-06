@@ -70,6 +70,7 @@ export function Resume(){return <>
         <p className="resume-document-title">AI/ML Engineer | LLM Engineering | ML Evaluation & MLOps | Software Engineering</p>
         <p>Nigeria (Open to Remote) · {site.phone} · <a href={'mailto:'+site.email}>{site.email}</a></p>
         <p>GitHub: <a href={site.github}>github.com/evanandzutsi-eng</a> · LinkedIn: <a href={site.linkedin}>linkedin.com/in/george-andzutsi-833948268</a></p>
+        <p>Portfolio: <a href={site.portfolio}>george-andzutsi.vercel.app</a></p>
       </header>
 
       <section className="resume-document-section"><h2>Professional Summary</h2><p>{site.professionalSummary}</p></section>
