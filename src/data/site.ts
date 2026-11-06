@@ -14,6 +14,7 @@ export const site = {
   availability: 'Open to Remote Opportunities',
   github: 'https://github.com/evanandzutsi-eng',
   linkedin: 'https://www.linkedin.com/in/george-andzutsi-833948268',
+  portfolio: 'https://george-andzutsi.vercel.app/',
   x: 'https://x.com/Andzutsi_',
   whatsapp: 'https://wa.me/2348100362060',
   facebook: 'https://www.facebook.com/profile.php?id=61588327748153&mibextid=ZbWKwL',
