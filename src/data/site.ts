@@ -19,6 +19,7 @@ export const site = {
   facebook: 'https://www.facebook.com/profile.php?id=61588327748153&mibextid=ZbWKwL',
   telegram: 'https://t.me/George_buddy',
   youtube: 'https://youtube.com/@evanandzutsi?si=k9tV1DxsO9iBSWLc',
+  teams: 'https://teams.microsoft.com/l/chat/0/0?users=andzutsiowulama@gmail.com',
   booking: 'https://tally.so/r/VLqJoE',
   contactEndpoint: '[CONTACT_ENDPOINT]',
   profileImage: { avif: '/assets/images/profile/george-profile.avif', webp: '/assets/images/profile/george-profile.webp', fallback: '/assets/images/profile/george-profile.webp' },
@@ -42,6 +43,9 @@ export const socialLinks = [
   {key:'facebook',label:'Facebook',url:site.facebook},
   {key:'telegram',label:'Telegram',url:site.telegram},
   {key:'youtube',label:'YouTube',url:site.youtube},
+  {key:'teams',label:'Microsoft Teams',url:site.teams},
+  {key:'email',label:'Email',url:`mailto:${site.email}`},
+  {key:'phone',label:'Phone',url:`tel:${site.phone.replace(/[^+\\d]/g,'')}`},
 ]
 
 export const navLinks = [
