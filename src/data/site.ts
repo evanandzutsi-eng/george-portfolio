@@ -176,7 +176,7 @@ export const projects = [
     proof:['Responsive React/Vite interface','Reusable page components','Programs and foundation information sections','Contact and donation-oriented UI','Netlify deployment configuration'],
     links:{github:'https://github.com/evanandzutsi-eng/foundation-website',live:''},
   },
-]]
+]
 
 export const experience = [
   {period:'2025 — Present', role:'Software Developer | NASITDEA (Nasarawa State Information Technology and Digital Economy Agency)', bullets:['Integrate APIs and build backend systems to support the agency’s digital initiatives.','Work on backend development, connecting internal systems and services through API integration.']},
