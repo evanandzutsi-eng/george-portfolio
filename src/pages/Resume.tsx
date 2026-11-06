@@ -5,6 +5,7 @@ import {PageHero} from '../components/Section'
 
 const experienceItems = [
   {period:'2026 — Present',role:'ML / Evaluation & MLOps Engineer (ML/EvalOps)',organization:'Nasarawa State Information and Digital Economy Agency (NASITDEA)',bullets:[
+    'Promoted from Stack Assistant into the ML/EvalOps engineering role in 2026.',
     'Support machine learning and AI engineering workflows, contributing to model evaluation and assessment of AI-system responses for quality, consistency and reliability.',
     'Work with evaluation datasets, test cases and structured assessment processes; maintain evaluation and experiment documentation.',
     'Support experiment tracking and model-versioning practices so evaluation results remain comparable and reproducible.',
