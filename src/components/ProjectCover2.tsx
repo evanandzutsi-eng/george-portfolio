@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react'
-import {GitBranch,Bot,CreditCard,Video,Workflow,Code2,Database,Zap,FileText,HeartPulse} from 'lucide-react'
+import {GitBranch,Bot,CreditCard,Video,Workflow,Code2,Database,Zap,FileText,HeartPulse,ShieldCheck} from 'lucide-react'
 const themes:Record<string,{label:string;accent:string;secondary:string}>={'dalacare-ai':{label:'DALACARE AI',accent:'#34d399',secondary:'#0f766e'},'2way-private-social-lounge':{label:'2WAY',accent:'#60a5fa',secondary:'#4338ca'},'getby-secure-trading-platform':{label:'GETBY',accent:'#fbbf24',secondary:'#b45309'},georgepay:{label:'GEORGEPAY',accent:'#38bdf8',secondary:'#6366f1'},'codeflow-ai':{label:'CODEFLOW',accent:'#22d3ee',secondary:'#3b82f6'},regismeet:{label:'REGISMEET',accent:'#a78bfa',secondary:'#6366f1'},'workflow-automation-api-integration':{label:'AUTOMATION',accent:'#34d399',secondary:'#06b6d4'},'verdant-foundation':{label:'VERDANT',accent:'#84cc16',secondary:'#15803d'},'ai-report-processing':{label:'AI REPORTS',accent:'#f59e0b',secondary:'#ea580c'}}
 function Frame({children,className=''}:{children:ReactNode;className?:string}){return <div className={`cover-frame ${className}`}>{children}</div>}
 export function ProjectCover2({slug,title}:{slug:string;title:string}){
