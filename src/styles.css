@@ -24,3 +24,54 @@
 /* V3.2 AI Portfolio Assistant */
 .assistant-messages{display:grid;gap:18px;max-height:390px;overflow:auto;padding:20px 4px;scrollbar-width:thin}.assistant-message{display:flex;gap:10px;align-items:flex-start}.assistant-message.user{justify-content:flex-end}.assistant-message.user .message-avatar{order:2;background:var(--surface);color:var(--muted)}.assistant-message>div{max-width:88%}.assistant-message p{margin:0;padding:12px 14px;border:1px solid var(--line);background:var(--surface);border-radius:13px;font-size:13px;line-height:1.7;color:var(--muted)}.assistant-message.user p{background:var(--accent);border-color:var(--accent);color:#091008}.message-avatar{width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:var(--accent);color:#091008;flex:none}.assistant-sources{display:flex;gap:7px;flex-wrap:wrap;margin-top:7px}.assistant-sources a{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--line);border-radius:999px;padding:5px 8px;font-size:9px;color:var(--text)}.assistant-disclaimer{display:block;color:var(--muted);font-size:9px;line-height:1.5;margin-top:10px}.assistant-close{margin-left:auto}.assistant-input button:disabled{opacity:.45;cursor:not-allowed}.typing{display:flex!important;gap:4px;align-items:center;min-height:42px}.typing i{width:5px;height:5px;border-radius:50%;background:currentColor;animation:assistantPulse 1s infinite}.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}@keyframes assistantPulse{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}.assistant-page{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}.assistant-page-intro{position:sticky;top:120px}.assistant-card-full{box-shadow:var(--shadow)}.assistant-launch{min-height:240px;border:1px solid var(--line);background:var(--surface);border-radius:18px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--text);font:inherit;cursor:pointer;box-shadow:var(--shadow);transition:transform .2s ease,border-color .2s ease}.assistant-launch:hover{transform:translateY(-3px);border-color:var(--accent)}.assistant-launch svg{color:var(--accent)}
 @media(max-width:800px){.assistant-page{grid-template-columns:1fr}.assistant-page-intro{position:static}.assistant-messages{max-height:440px}.assistant-launch{min-height:170px}}
+
+
+/* AI/ML resume page */
+.resume-page{max-width:980px}
+.resume-actions,.resume-bottom-actions{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:0 0 22px}
+.resume-actions .eyebrow{margin:0 0 6px}
+.resume-actions .small{margin:0}
+.resume-print-area{background:#fff;color:#182235;border:1px solid rgba(18,34,53,.12);border-radius:18px;padding:clamp(24px,5vw,58px);box-shadow:0 18px 55px rgba(0,0,0,.16);font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.48}
+.resume-document-header{border-bottom:2px solid #dbe3ed;padding-bottom:17px;margin-bottom:20px}
+.resume-document-header h1{font-size:clamp(30px,4vw,42px);line-height:1.08;letter-spacing:-1.5px;margin:0 0 8px;color:#111d31}
+.resume-document-header p{margin:4px 0;color:#3e4b60;font-size:12px}
+.resume-document-header a,.resume-project-heading a,.resume-education-item a{color:#175bc1;text-decoration:underline;text-underline-offset:2px}
+.resume-document-title{font-size:15px!important;font-weight:700;color:#175bc1!important}
+.resume-document-section{margin:20px 0 0}
+.resume-document-section h2{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;color:#175bc1;border-bottom:1px solid #dbe3ed;padding-bottom:6px;margin:0 0 11px}
+.resume-document-section>p{margin:0 0 9px}
+.resume-document-role,.resume-document-project{margin:0 0 15px;break-inside:avoid}
+.resume-role-heading,.resume-project-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.resume-role-heading h3,.resume-project-heading h3{font-size:13px;line-height:1.35;color:#17243a;margin:0 0 4px}
+.resume-role-heading span{font-size:11px;color:#59677a;white-space:nowrap}
+.resume-project-heading a{font-size:11px;white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
+.resume-project-role{font-size:11px;font-style:italic;color:#59677a;margin:0 0 3px}
+.resume-stack,.resume-additional,.resume-skill-row{font-size:11px;color:#445168;margin:0 0 5px}
+.resume-bullet{position:relative;padding-left:13px;font-size:11.5px;line-height:1.4;margin:3px 0;color:#27354a}
+.resume-bullet:before{content:'•';position:absolute;left:2px;color:#175bc1}
+.resume-skill-row{line-height:1.48;margin:0 0 5px}
+.resume-skill-row b{color:#1c2b43}
+.resume-education-item{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-size:11.5px;padding:4px 0;border-bottom:1px solid #edf1f5}
+.resume-education-item span,.resume-education-item a{white-space:nowrap;color:#526177;font-size:11px}
+.resume-bottom-actions{margin-top:20px}
+@media(max-width:640px){.resume-actions,.resume-bottom-actions{align-items:flex-start;flex-direction:column}.resume-print-area{padding:22px 17px}.resume-role-heading,.resume-project-heading{flex-direction:column;gap:2px}.resume-role-heading span{white-space:normal}.resume-education-item{flex-direction:column;gap:2px}}
+@media print{
+  @page{size:A4;margin:12mm 13mm}
+  html,body,#root,.app-shell{background:#fff!important;color:#172235!important;overflow:visible!important}
+  body *{visibility:hidden!important}
+  .resume-print-area,.resume-print-area *{visibility:visible!important}
+  .resume-print-area{position:absolute!important;left:0!important;top:0!important;width:100%!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important;color:#172235!important;font-size:9pt!important;line-height:1.34!important}
+  .resume-actions,.resume-bottom-actions,.page-hero,.navbar,footer{display:none!important}
+  .resume-document-header{padding-bottom:10px;margin-bottom:12px}
+  .resume-document-header h1{font-size:24pt!important}
+  .resume-document-header p{font-size:8.5pt!important}
+  .resume-document-title{font-size:10pt!important}
+  .resume-document-section{margin-top:12px;break-inside:auto}
+  .resume-document-section h2{font-size:9pt!important;margin-bottom:7px}
+  .resume-document-role,.resume-document-project{margin-bottom:9px;break-inside:avoid}
+  .resume-role-heading h3,.resume-project-heading h3{font-size:9pt!important}
+  .resume-role-heading span,.resume-project-heading a,.resume-project-role,.resume-stack,.resume-additional,.resume-skill-row,.resume-education-item{font-size:8pt!important}
+  .resume-bullet{font-size:8pt!important;line-height:1.28!important;margin:2px 0}
+  .resume-education-item{padding:2px 0}
+  a{color:#175bc1!important;text-decoration:none!important}
+}
