@@ -24,7 +24,7 @@ export const site = {
   contactEndpoint: '[CONTACT_ENDPOINT]',
   profileImage: { avif: '/assets/images/profile/george-profile.avif', webp: '/assets/images/profile/george-profile.webp', fallback: '/assets/images/profile/george-profile.webp' },
   heroImage: { avif: '/assets/images/hero/george-hero.avif', webp: '/assets/images/hero/george-hero.webp', fallback: '/assets/images/hero/george-hero.webp' },
-  cv: '/assets/George_Andzutsi_AI_ML_Engineer_Resume.pdf',
+  cv: '/resume',
   certification: { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: 'https://freecodecamp.org/certification/fcc-74269a2b-0e4c-4508-b7e3-299ebc76e4cf-python-v9' },
   certifications: [
     { name: 'Scientific Computing with Python', issuer: 'freeCodeCamp', date: '', credentialUrl: 'https://freecodecamp.org/certification/fcc-74269a2b-0e4c-4508-b7e3-299ebc76e4cf-python-v9' },
