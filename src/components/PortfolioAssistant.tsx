@@ -14,7 +14,7 @@ function localAnswer(question:string){
 
   if (/who|about|george|profile|background|journey/.test(q)) {
     add('About George','/about')
-    return {text:`George Owulama Andzutsi is an AI Engineer & Software Engineer whose work connects web development, software engineering, AI/LLM integration, APIs, automation and practical digital solutions. His career story combines independent engineering work with NASITDEA, the Nigerian Jubilee Fellows Programme (NJFP), NYSC, industrial training and other technical environments.`,sources}
+    return {text:`${site.name} is an AI/ML Engineer whose work focuses on applied machine learning, LLM engineering, RAG, conversational AI, AI evaluation and MLOps, supported by software engineering across Python, FastAPI, APIs and full-stack applications. He serves as an ML / Evaluation & MLOps Engineer at NASITDEA through the Nigeria Jubilee Fellows Programme (NJFP), and as Team Lead of the AI/ML Department at DalaCare AI under Dala Innovations. ${site.professionalSummary}`,sources}
   }
   if (/hire|contact|work with|start|project|consult/.test(q)) {
     add('Start a project','/start-a-project'); add('Contact','/contact')
@@ -34,11 +34,11 @@ function localAnswer(question:string){
   }
   if (/experience|career|nasitdea|njfp|nysc|nta|option fm/.test(q)) {
     add('Experience','/experience')
-    return {text:`The experience timeline includes independent Web Developer & Software Engineer work with AI integration and automation, NASITDEA as a Stack Assistant, the Nigerian Jubilee Fellows Programme (NJFP), NYSC teaching experience, NTA industrial training/team leadership, Option FM technical operations and university field research leadership.`,sources}
+    return {text:`The current professional roles include ML / Evaluation & MLOps Engineer at NASITDEA through NJFP, Team Lead of the AI/ML Department at DalaCare AI under Dala Innovations, and Independent Full-Stack Software Engineer focused on AI integration and automation.`,sources}
   }
   if (/ai|llm|agent|automation/.test(q)) {
     add('AI / software approach','/about')
-    return {text:`The portfolio treats AI as an engineering capability rather than a standalone buzzword. The focus is on integrating models into useful software through APIs, application logic, data, automation, security and deployment. Career interests include practical LLM applications, AI-assisted development, AI evaluation and intelligent business processes.`,sources}
+    return {text:`AI/ML engineering is George's primary professional focus. His work includes applied AI/ML, LLM-powered applications, RAG, conversational AI, structured model-response evaluation and MLOps workflows. Software engineering provides the foundation for building, integrating, securing and deploying these systems.`,sources}
   }
   if (/remote|global|location|where/.test(q)) {
     return {text:`George is based in Nigeria and presents himself as available for remote and global collaboration. The portfolio does not claim specific international clients or locations that have not been verified.`}
