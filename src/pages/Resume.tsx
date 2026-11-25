@@ -4,7 +4,7 @@ import {site} from '../data/site'
 import {PageHero} from '../components/Section'
 
 const experienceItems = [
-  {period:'2026 — Present',role:'ML / Evaluation & MLOps Engineer (ML/EvalOps)',organization:'Nasarawa State Information and Digital Economy Agency (NASITDEA)',bullets:[
+  {period:'2026 — Present',role:'ML / Evaluation & MLOps Engineer (ML/EvalOps)',organization:'NASITDEA (Nigeria Jubilee Fellows Programme — NJFP)',bullets:[
     'Promoted from Stack Assistant into the ML/EvalOps engineering role in 2026.',
     'Support machine learning and AI engineering workflows, contributing to model evaluation and assessment of AI-system responses for quality, consistency and reliability.',
     'Work with evaluation datasets, test cases and structured assessment processes; maintain evaluation and experiment documentation.',
@@ -12,7 +12,7 @@ const experienceItems = [
     'Collaborate with software developers and technical stakeholders on integrating, testing and improving AI-powered systems.',
     'Apply software engineering practices (version control, testing, documentation) to ML and evaluation workflows.'
   ]},
-  {period:'',role:'Team Lead, AI/ML Department',organization:'DalaCare AI',bullets:[
+  {period:'',role:'Team Lead, AI/ML Department',organization:'DalaCare AI, Dala Innovations',bullets:[
     'Lead and coordinate the AI/ML department across three workstreams: chatbot engineering, symptom and triage intelligence, and evaluation/MLOps.',
     'Provide technical direction on LLM integration, conversational response quality and AI system architecture; review technical contributions and guide cross-functional integration.',
     'Guide task allocation, sprint planning and delivery priorities; coordinate evaluation strategy and structured test-case development.',
@@ -27,7 +27,7 @@ const experienceItems = [
 ]
 
 const projects = [
-  {name:'DalaCare AI — AI-Powered Healthcare Assistant',role:'AI/ML Department Team Lead (technical direction, evaluation oversight, integration guidance)',stack:'Python, FastAPI, RAG, FAISS, Sentence Transformers, Groq (Llama 3.3 70B), Exa Search, Whisper, SSE, Langfuse, Docker, Hugging Face Spaces',url:'https://github.com/DalaCare-AI-Architecture/DalaCare-AI-2',bullets:[
+  {name:'DalaCare AI — AI-Powered Healthcare Assistant',role:'AI/ML Department Team Lead, Dala Innovations (technical direction, evaluation oversight, integration guidance)',stack:'Python, FastAPI, RAG, FAISS, Sentence Transformers, Groq (Llama 3.3 70B), Exa Search, Whisper, SSE, Langfuse, Docker, Hugging Face Spaces',url:'https://github.com/DalaCare-AI-Architecture/DalaCare-AI-2',bullets:[
     'Conversational healthcare assistant combining LLM response generation with retrieval-grounded answers (FAISS, Sentence Transformers), Exa Search fallback, Whisper speech transcription and streamed responses over SSE.',
     'Directed structured symptom and urgency classification workflows, evaluation test cases and response-quality assessment to improve reliability.',
     'Championed safety principles: emergency red flags override lower urgency; missing information is never treated as a negative finding; insufficient information triggers human review. Designed as decision support, not a substitute for professional diagnosis.',
@@ -58,7 +58,7 @@ const skillGroups = [
 ]
 
 export function Resume(){return <>
-  <PageHero eyebrow="OFFICIAL RESUME" title="George Owulama Andzutsi" description="AI/ML Engineer | LLM Engineering | ML Evaluation & MLOps | Software Engineering · Nigeria (Open to Remote)"/>
+  <PageHero eyebrow="OFFICIAL RESUME" title="George Owulama Andzutsi" description="AI/ML Engineer | LLM Engineering | ML Evaluation & MLOps | Software Engineering · Remote & Nasarawa-Based Opportunities"/>
   <section className="section"><div className="container resume-page">
     <div className="resume-actions">
       <div><p className="eyebrow">UPDATED PROFESSIONAL RESUME</p><p className="small muted">Print this ATS-friendly version or choose Save as PDF in your browser's print destination.</p></div>
