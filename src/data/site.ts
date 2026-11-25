@@ -1,17 +1,17 @@
 export const site = {
   name: 'George Owulama Andzutsi',
   shortName: 'George Andzutsi',
-  title: 'AI/ML Engineer & Software Engineer',
-  currentRole: 'ML / Evaluation & MLOps Engineer (ML/EvalOps) | NASITDEA',
-  positioning: 'Applied AI/ML · LLM Engineering · ML Evaluation & MLOps · Python · FastAPI · Software Engineering',
-  description: 'George Owulama Andzutsi is an applied AI/ML engineer focused on LLM-powered applications, RAG, machine learning evaluation, MLOps workflows, Python backend engineering and reliable AI system integration.',
-  professionalSummary: 'Applied AI/ML engineer who designs, integrates, evaluates and deploys LLM-powered software, from RAG and conversational AI to evaluation workflows and API services. Currently ML/EvalOps Engineer at NASITDEA, assessing AI-system response quality through structured test cases, and Team Lead of the AI/ML Department at DalaCare AI, directing chatbot engineering, symptom and triage intelligence, and evaluation/MLOps workstreams for a safety-sensitive healthcare assistant. Works across the Hugging Face ecosystem and integrates OpenAI, Anthropic, Gemini, Groq and OpenRouter models into Python/FastAPI backends with Docker-based deployment, Langfuse observability and secure REST API practices. Turns real-world problems into reliable AI products and works across engineering and product stakeholders throughout the AI solution lifecycle.',
+  title: 'AI/ML Engineer | Software Engineer | LLM Engineer',
+  currentRole: 'ML / Evaluation & MLOps Engineer (NJFP Fellow) | NASITDEA',
+  positioning: 'AI/ML Engineering · LLM Engineering · ML Evaluation & MLOps · Software Engineering · AI Automation',
+  description: 'George Owulama Andzutsi is an AI/ML Engineer working across applied machine learning, LLM engineering, RAG, AI evaluation, MLOps and software engineering. He builds and integrates practical AI-powered applications and reliable backend systems.',
+  professionalSummary: 'AI/ML Engineer focused on applied machine learning, LLM-powered applications, retrieval-augmented generation, conversational AI, model/API integration, AI evaluation and MLOps workflows. Currently serving as an ML / Evaluation & MLOps Engineer at the Nasarawa State Information and Digital Economy Agency (NASITDEA) through the Nigeria Jubilee Fellows Programme (NJFP), contributing to AI-system response assessment, evaluation datasets, structured test cases and technical documentation. Also Team Lead of the AI/ML Department at DalaCare AI under Dala Innovations, coordinating chatbot engineering, symptom and triage intelligence, and evaluation/MLOps workstreams for a safety-sensitive healthcare assistant. Combines applied AI/ML work with software engineering across Python, FastAPI, REST APIs, databases, Docker and modern web technologies to build useful, maintainable digital systems.',
   experienceYears: 'Applied AI/ML Engineering · LLM Integration · ML Evaluation & MLOps',
   email: 'andzutsiowulama@gmail.com',
   phone: '+2348100362060',
   location: 'Nigeria',
   remote: 'Remote · Available for global collaboration',
-  availability: 'Open to Remote Opportunities',
+  availability: 'Available for Remote & Nasarawa-Based Opportunities',
   github: 'https://github.com/evanandzutsi-eng',
   linkedin: 'https://www.linkedin.com/in/george-andzutsi-833948268',
   portfolio: 'https://george-andzutsi.vercel.app/',
@@ -56,13 +56,14 @@ export const navLinks = [
 ] as const
 
 export const skills = [
+  { category:'AI/ML Engineering', icon:'BrainCircuit', description:'Applied AI/ML capabilities demonstrated across LLM applications, evaluation workflows and intelligent systems.', items:['Applied AI/ML Engineering','LLM Engineering','Generative AI Applications','Retrieval-Augmented Generation (RAG)','Conversational AI','Natural Language Processing (NLP)','ML Evaluation','AI Response Evaluation','Evaluation Dataset Design','Structured Test Cases','Prompt Engineering','AI Safety & Response Quality','MLOps Workflows'] },
   { category:'Programming', icon:'Code2', description:'Core languages used across frontend, backend and application development.', items:['Python','TypeScript','JavaScript (ES6+)','HTML5','CSS3'] },
   { category:'Frontend Development', icon:'PanelsTopLeft', description:'Responsive interfaces and reusable components built around practical product requirements.', items:['React.js','Responsive Interfaces','Reusable Components','Figma','UI/UX'] },
   { category:'Backend & APIs', icon:'ServerCog', description:'Backend services and API-driven application architecture.', items:['Node.js','Express','Python','FastAPI','REST APIs','REST API Development','REST API Consumption'] },
   { category:'APIs & Integrations', icon:'Workflow', description:'Connecting applications with third-party services and authentication systems.', items:['Third Party API Integration','Authentication','JWT','OAuth','Webhooks','Paystack','API Testing','Postman'] },
   { category:'Databases & Data', icon:'Database', description:'Practical relational, non-relational, hosted and in-memory data work.', items:['MySQL','MongoDB','Supabase','Neon','Redis','Upstash','Basic SQL'] },
   { category:'Testing & Debugging', icon:'ShieldCheck', description:'Iterative testing and troubleshooting across application layers.', items:['Postman','Jest','Manual Testing','API Testing','Debugging','Troubleshooting','Iterative Testing'] },
-  { category:'AI & Automation', icon:'Sparkles', description:'Practical AI application work, AI-assisted development and workflow automation.', items:['AI API Integration','AI Applications','AI-assisted Development','Prompt Engineering','Prompt Refinement','AI Response Evaluation','AI Behavioral Testing','Context Handling','Instruction Adherence Testing','Zapier','Make.com','API-Based Workflows','AI Workflow Experimentation','Agentic AI Concepts'] },
+  { category:'AI Applications & Automation', icon:'Sparkles', description:'Practical AI application integration, AI-assisted development and workflow automation.', items:['AI API Integration','AI Applications','AI-assisted Development','Prompt Engineering','Prompt Refinement','AI Response Evaluation','AI Behavioral Testing','Context Handling','Instruction Adherence Testing','Zapier','Make.com','API-Based Workflows','AI Workflow Experimentation','Agentic AI Concepts'] },
   { category:'Development & Delivery', icon:'CloudCog', description:'Tools used for source control, local development, deployment and CLI workflows.', items:['Git','GitHub','Docker','Windows Terminal','PowerShell','CLI Workflows','Vercel','Railway','Render','Netlify'] },
 ]
 
@@ -87,7 +88,7 @@ export const projects = [
     deployment:'Docker-based deployment documented on Hugging Face Spaces, with live API documentation available.',
     outcome:'A team-built medical assistant API demonstrating RAG, intent-aware LLM orchestration, trusted-source fallback, voice processing, streaming and observability. George’s role is team leadership and AI/ML coordination, not sole authorship.',
     stack:['Python','FastAPI','FAISS','Sentence Transformers','Groq','Llama 3.3 70B','Exa Search','Whisper','SSE','Langfuse','Docker','Hugging Face Spaces'],
-    status:'Team Project · Deployed API', evidence:'Team project with documented API and live documentation', role:'Team Lead · AI/ML coordination · Technical direction and evaluation oversight',
+    status:'Team Project · Deployed API', evidence:'Team project with documented API and live documentation', role:'Team Lead · AI/ML coordination · Technical direction and evaluation oversight | Dala Innovations',
     proof:['RAG pipeline over medical reference content','Seven intent-based response modes','Trusted medical-domain web-search fallback','Groq Llama 3.3 70B integration','Whisper voice input','Server-sent event streaming','Langfuse observability','Per-IP rate limiting','Live API documentation'],
     links:{github:'https://github.com/DalaCare-AI-Architecture/DalaCare-AI-2',live:'https://dalainnovation-dalacare-chat-ai.hf.space/docs'},
   },
@@ -184,14 +185,14 @@ export const projects = [
 ]
 
 export const experience = [
-  {period:'2026 — Present', role:'ML / Evaluation & MLOps Engineer (ML/EvalOps) | Nasarawa State Information and Digital Economy Agency (NASITDEA)', bullets:[
+  {period:'2026 — Present', role:'ML / Evaluation & MLOps Engineer (ML/EvalOps) | NASITDEA (Nigeria Jubilee Fellows Programme — NJFP)', bullets:[
     'Promoted from Stack Assistant into the ML/EvalOps engineering role in 2026.','Support machine learning and AI engineering workflows, contributing to model evaluation and assessment of AI-system responses for quality, consistency and reliability.',
     'Work with evaluation datasets, test cases and structured assessment processes; maintain evaluation and experiment documentation.',
     'Support experiment tracking and model-versioning practices so evaluation results remain comparable and reproducible.',
     'Collaborate with software developers and technical stakeholders on integrating, testing and improving AI-powered systems.',
     'Apply software engineering practices including version control, testing and documentation to ML and evaluation workflows.'
   ]},
-  {period:'Team Leadership', role:'Team Lead, AI/ML Department | DalaCare AI', bullets:[
+  {period:'Team Leadership', role:'Team Lead, AI/ML Department | DalaCare AI, Dala Innovations', bullets:[
     'Lead and coordinate the AI/ML department across chatbot engineering, symptom and triage intelligence, and evaluation/MLOps workstreams.',
     'Provide technical direction on LLM integration, conversational response quality and AI system architecture; review technical contributions and guide cross-functional integration.',
     'Guide task allocation, sprint planning and delivery priorities; coordinate evaluation strategy and structured test-case development.',
@@ -212,7 +213,7 @@ export const education = [
 ]
 
 export const careerInterests = [
-  'AI Engineering and practical LLM applications',
+  'AI/ML engineering and practical LLM applications',
   'Full-stack software engineering',
   'AI-assisted development and AI evaluation',
   'API engineering and third-party integrations',
