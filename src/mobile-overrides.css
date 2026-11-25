@@ -165,3 +165,110 @@ img,svg,video,canvas{max-width:100%}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+
+/* Mobile rendering hardening: keep project previews and content in normal flow. */
+@media (max-width:700px){
+  .project-card{
+    position:relative;
+    isolation:isolate;
+    contain:layout paint;
+    overflow:hidden;
+  }
+  .project-card .project-cover{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    height:auto;
+    padding:12px 12px 14px;
+    overflow:hidden;
+    isolation:isolate;
+    margin:0 0 16px;
+  }
+  .project-card .cover-frame{
+    position:relative;
+    inset:auto;
+    flex:none;
+    width:100%;
+    height:145px;
+    margin:0 auto 10px;
+    border-radius:13px;
+  }
+  .project-card .cover-caption{
+    position:relative;
+    inset:auto;
+    display:flex;
+    min-height:14px;
+    padding:0 2px;
+    line-height:1.4;
+    white-space:normal;
+  }
+  .project-card .cover-caption b{display:inline;color:#e2e8f0}
+  .project-card .stack-row{
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:7px 9px;
+    max-width:100%;
+    overflow:visible;
+    white-space:normal;
+    line-height:1.6;
+    animation:none!important;
+    transform:none!important;
+    contain:layout paint;
+  }
+  .project-card .stack-row span{
+    display:inline-block;
+    max-width:100%;
+    padding-right:9px;
+    overflow-wrap:anywhere;
+  }
+  .project-card .project-body,
+  .project-card .project-body *{
+    animation:none!important;
+  }
+  .project-card:hover{transform:none}
+  .project-card .meeting-grid{min-height:70px}
+  .architecture{
+    max-width:100%;
+    gap:0;
+    margin:0;
+    isolation:isolate;
+    contain:layout paint;
+  }
+  .architecture-step{position:relative;display:flex;flex-direction:column;align-items:stretch}
+  .architecture-connector{
+    position:relative;
+    display:grid;
+    place-items:center;
+    height:28px;
+    color:var(--accent);
+    background:transparent;
+    filter:none;
+    opacity:1;
+  }
+  .architecture-connector svg{display:block;flex:none}
+  .architecture .arch-node{
+    position:relative;
+    min-height:58px;
+    padding:15px 17px;
+    display:grid;
+    grid-template-columns:34px 28px 1fr;
+    align-items:center;
+    gap:10px;
+    overflow:visible;
+    transform:none!important;
+    filter:none!important;
+    box-shadow:none;
+    backdrop-filter:none;
+  }
+  .architecture .arch-node b{display:none}
+  .architecture .arch-node strong{font-size:14px}
+}
+@media(max-width:420px){
+  .project-card .cover-frame{height:132px}
+  .project-card .project-body{padding:17px 15px 18px}
+  .architecture .arch-node{min-height:54px;padding:13px 14px}
+}
