@@ -14,7 +14,7 @@ function localAnswer(question:string){
 
   if (/who|about|george|profile|background|journey/.test(q)) {
     add('About George','/about')
-    return {text:`${site.name} is an AI/ML Engineer whose work focuses on applied machine learning, LLM engineering, RAG, conversational AI, AI evaluation and MLOps, supported by software engineering across Python, FastAPI, APIs and full-stack applications. He serves as an ML / Evaluation & MLOps Engineer at NASITDEA through the Nigeria Jubilee Fellows Programme (NJFP), and as Team Lead of the AI/ML Department at DalaCare AI under Dala Innovations. ${site.professionalSummary}`,sources}
+    return {text:site.professionalSummary,sources}
   }
   if (/hire|contact|work with|start|project|consult/.test(q)) {
     add('Start a project','/start-a-project'); add('Contact','/contact')
@@ -41,7 +41,7 @@ function localAnswer(question:string){
     return {text:`AI/ML engineering is George's primary professional focus. His work includes applied AI/ML, LLM-powered applications, RAG, conversational AI, structured model-response evaluation and MLOps workflows. Software engineering provides the foundation for building, integrating, securing and deploying these systems.`,sources}
   }
   if (/remote|global|location|where/.test(q)) {
-    return {text:`George is based in Nigeria and presents himself as available for remote and global collaboration. The portfolio does not claim specific international clients or locations that have not been verified.`}
+    return {text:`George is based in Nigeria and is available for remote opportunities and suitable on-site opportunities in Nasarawa State. The portfolio does not claim specific international clients or locations that have not been verified.`}
   }
   if (/github|repository|code/.test(q)) {
     add('GitHub','https://github.com/evanandzutsi-eng')
